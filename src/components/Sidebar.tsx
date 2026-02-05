@@ -1,10 +1,4 @@
-import {
-    Drawer,
-    Toolbar,
-    Typography,
-    useMediaQuery,
-    useTheme,
-} from '@mui/material';
+import { Drawer, Typography, useMediaQuery, useTheme } from '@mui/material';
 
 const drawerWidth = {
     mobile: '100%',
@@ -13,7 +7,7 @@ const drawerWidth = {
     largeDesktop: '15%',
 } as const;
 
-export default function SideBar() {
+export default function Sidebar() {
     const theme = useTheme();
     const isTablet = useMediaQuery(theme.breakpoints.up('tablet'));
     // TODO implementing menu off on functionality in mobile
@@ -30,8 +24,6 @@ export default function SideBar() {
                 },
             }}
         >
-            <Toolbar />
-
             <Typography>MyDrawer</Typography>
         </Drawer>
     );
