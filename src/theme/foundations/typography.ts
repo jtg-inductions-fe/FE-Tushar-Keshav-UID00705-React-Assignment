@@ -50,6 +50,11 @@ const typographyStyle = (theme: Theme): TypographyOptions => ({
         fontWeight: 600,
         lineHeight: typographyUtil.pxToRem(24),
     },
+    subtitle1: {
+        fontSize: typographyUtil.pxToRem(12),
+        fontWeight: 400,
+        lineHeight: typographyUtil.pxToRem(18),
+    },
     subtitle2: {
         fontSize: typographyUtil.pxToRem(16),
         fontWeight: 500,
@@ -77,7 +82,7 @@ const typographyStyle = (theme: Theme): TypographyOptions => ({
     },
     caption: {
         fontSize: typographyUtil.pxToRem(12),
-        fontWeight: 400,
+        fontWeight: 500,
         lineHeight: typographyUtil.pxToRem(18),
     },
     overline: {
