@@ -10,7 +10,6 @@ export default function PublicLayout() {
         <Grid2 container>
             <Header></Header>
             <Toolbar />
-
             <Sidebar></Sidebar>
             <Outlet />
         </Grid2>
