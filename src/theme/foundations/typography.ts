@@ -16,7 +16,6 @@ const typographyUtil: TypographyUtils = {
     pxToRem: (px: number) => `${px / HTML_FONT_SIZE}` + 'rem',
 };
 
-// TODO: Add the necessary typographies here.
 /**
  * Creates a typography block with various styles
  * @param theme - Theme object to access the breakpoints.
@@ -45,13 +44,8 @@ const typographyStyle = (theme: Theme): TypographyOptions => ({
         fontSize: typographyUtil.pxToRem(20),
         fontWeight: 600,
         lineHeight: typographyUtil.pxToRem(30),
-
-        [theme.breakpoints.up('tablet')]: {
-            fontSize: typographyUtil.pxToRem(45),
-            lineHeight: typographyUtil.pxToRem(45),
-        },
     },
-    subtitle1: {
+    h3: {
         fontSize: typographyUtil.pxToRem(16),
         fontWeight: 600,
         lineHeight: typographyUtil.pxToRem(24),
@@ -75,6 +69,11 @@ const typographyStyle = (theme: Theme): TypographyOptions => ({
             fontSize: typographyUtil.pxToRem(14),
             lineHeight: typographyUtil.pxToRem(20),
         },
+    },
+    button: {
+        fontSize: typographyUtil.pxToRem(14),
+        fontWeight: 600,
+        lineHeight: typographyUtil.pxToRem(20),
     },
     caption: {
         fontSize: typographyUtil.pxToRem(12),

@@ -10,7 +10,7 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: '/overview',
-                Component: Dashboard,
+                element: <Dashboard />,
             },
             // TODO: Adding rest of the paths
         ],

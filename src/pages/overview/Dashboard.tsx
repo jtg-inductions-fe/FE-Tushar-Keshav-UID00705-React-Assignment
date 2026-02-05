@@ -1,10 +1,9 @@
-import { Toolbar, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 import Grid2 from '@mui/material/Grid2';
 
 export default function Dashboard() {
     return (
-        <Grid2>
-            <Toolbar />
+        <Grid2 container>
             <Typography variant="h1" color="primary">
                 h1: Nothing to show here....
             </Typography>
