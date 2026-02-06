@@ -6,7 +6,10 @@
             "@constant": ["constant/index"],
             "@theme": ["theme/index"],
             "@components": ["components/index"],
-            "@pages/*": ["pages/*"]
+            "@pages/*": ["pages/*"],
+            "@error/*": ["error/*"],
+            "@types": ["types"],
+            "@layout": ["layout/index"]
         }
     }
 }

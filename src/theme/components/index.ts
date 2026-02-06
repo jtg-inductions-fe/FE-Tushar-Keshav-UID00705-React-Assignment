@@ -22,7 +22,7 @@ const fontFaceDeclarations = `
         font-display: swap; 
         font-family: 'Inter';
         font-style: normal;
-        font-weight: 400;
+        font-weight: 600;
         src: url(${InterMediumWOFF2}) format('woff2'), 
         url(${InterMediumTTF}) format('truetype');
       };
@@ -30,7 +30,7 @@ const fontFaceDeclarations = `
         font-display: swap; 
         font-family: 'Inter';
         font-style: normal;
-        font-weight: 400;
+        font-weight: 700;
         src: url(${InterBoldWOFF2}) format('woff2'), 
         url(${InterBoldTTF}) format('truetype');
       };

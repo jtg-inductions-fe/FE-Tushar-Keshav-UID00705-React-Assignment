@@ -1,17 +1,23 @@
 import { Outlet } from 'react-router-dom';
 
-import { Toolbar } from '@mui/material';
-import Grid2 from '@mui/material/Grid2';
+import { Box, Toolbar } from '@mui/material';
 
-import { Header, Sidebar } from '@components';
-
+import { ErrorView, FlexBox, Header, Sidebar } from '@components';
+import { somethingWentWrong } from '@constant';
+import { MainErrorBoundary } from '@error/errorBoundary/MainErrorBoundary';
 export default function PublicLayout() {
     return (
-        <Grid2 container>
-            <Header></Header>
-            <Toolbar />
-            <Sidebar></Sidebar>
-            <Outlet />
-        </Grid2>
+        <FlexBox>
+            <Header />
+            <Sidebar />
+            <Box component="main" height="100vh">
+                <Toolbar />
+                <MainErrorBoundary
+                    fallback={<ErrorView {...somethingWentWrong} />}
+                >
+                    <Outlet />
+                </MainErrorBoundary>
+            </Box>
+        </FlexBox>
     );
 }

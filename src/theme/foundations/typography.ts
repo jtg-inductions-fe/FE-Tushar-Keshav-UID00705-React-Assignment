@@ -78,7 +78,7 @@ const typographyStyle = (theme: Theme): TypographyOptions => ({
     button: {
         fontSize: typographyUtil.pxToRem(14),
         fontWeight: 600,
-        lineHeight: typographyUtil.pxToRem(20),
+        lineHeight: typographyUtil.pxToRem(14),
     },
     caption: {
         fontSize: typographyUtil.pxToRem(12),
