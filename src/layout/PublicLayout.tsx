@@ -10,7 +10,7 @@ export default function PublicLayout() {
         <FlexBox>
             <Header />
             <Sidebar />
-            <Box component="main" height="100vh">
+            <Box component="main" height="100vh" flexGrow={1}>
                 <Toolbar />
                 <MainErrorBoundary
                     fallback={<ErrorView {...somethingWentWrong} />}
