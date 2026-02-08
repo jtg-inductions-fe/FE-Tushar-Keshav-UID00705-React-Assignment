@@ -1,4 +1,10 @@
 import {
+    Avatar,
+    AvatarProps,
+    Box,
+    BoxProps,
+    Card,
+    CardProps,
     Stack,
     StackProps,
     styled,
@@ -6,7 +12,10 @@ import {
     TypographyProps,
 } from '@mui/material';
 
-export const CenteredStack = styled(Stack)<StackProps>(() => ({
+import { theme } from '@theme';
+
+
+export const CenteredStack = styled(Stack)<StackProps>(({}) => ({
     alignItems: 'center',
     justifyContent: 'center',
 }));

@@ -8,6 +8,10 @@ export const palette: PaletteOptions = {
         main: COLORS.PRIMARY.MAIN,
         contrastText: COLORS.PRIMARY.CONTRAST_TEXT,
     },
+    secondary: {
+        main: COLORS.SECONDARY.MAIN,
+        contrastText: COLORS.SECONDARY.CONTRAST_TEXT,
+    },
     background: {
         default: COLORS.BACKGROUND.DEFAULT,
     },
