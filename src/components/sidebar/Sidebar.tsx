@@ -4,7 +4,7 @@ import { theme } from '@theme';
 
 import { StyledSidebar } from './Sidebar.styles';
 
-export default function Sidebar() {
+export function Sidebar() {
     const isTablet = useMediaQuery(theme.breakpoints.up('tablet'));
     // TODO implementing menu off on functionality in mobile
 
