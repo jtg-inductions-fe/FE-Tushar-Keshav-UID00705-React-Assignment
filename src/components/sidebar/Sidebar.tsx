@@ -1,10 +1,11 @@
-import { Toolbar, Typography, useMediaQuery } from '@mui/material';
+import { Box, Typography, useMediaQuery } from '@mui/material';
 
 import { theme } from '@theme';
 
 import { StyledSidebar } from './Sidebar.styles';
+import { SidebarProps } from './Sidebar.types';
 
-export function Sidebar() {
+export function Sidebar({ spacerHeight }: SidebarProps) {
     const isTablet = useMediaQuery(theme.breakpoints.up('tablet'));
     // TODO implementing menu off on functionality in mobile
 
@@ -14,7 +15,7 @@ export function Sidebar() {
             variant={isTablet ? 'permanent' : 'temporary'}
             anchor="left"
         >
-            <Toolbar />
+            <Box height={spacerHeight} />
             <Typography>MyDrammmmmmmmmmmmwer</Typography>
         </StyledSidebar>
     );

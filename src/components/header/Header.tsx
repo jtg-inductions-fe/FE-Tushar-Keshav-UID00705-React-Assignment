@@ -16,9 +16,9 @@ import {
     StyledNotificationIcon,
     StyledToolbar,
 } from './Header.styles';
-import { Product } from './Header.types';
+import { HeaderProps, Product } from './Header.types';
 
-export default function Header() {
+export default function Header({ headerRef }: HeaderProps) {
     const navigate = useNavigate();
     const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
 
@@ -45,7 +45,7 @@ export default function Header() {
     );
 
     return (
-        <StyledAppBar elevation={0}>
+        <StyledAppBar elevation={0} ref={headerRef}>
             <StyledToolbar>
                 <Stack
                     direction={'row'}

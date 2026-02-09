@@ -11,3 +11,7 @@ export type Product = Extract<
     tags: string;
     sales: number;
 };
+
+export type HeaderProps = {
+    headerRef: React.RefObject<HTMLElement | null>;
+};
