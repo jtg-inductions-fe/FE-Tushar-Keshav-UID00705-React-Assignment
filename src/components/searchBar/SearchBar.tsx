@@ -22,7 +22,8 @@ export function SearchBar<T extends BaseOption>({
     getOptions,
     onOptionSelect,
 }: SearchBarProps<T>) {
-    const [open, isLoading, options, setInput, setOpen] = useSearch(getOptions);
+    const [open, isLoading, options, setInput, setOpen] =
+        useSearch<T>(getOptions);
 
     return (
         <StyledSearchBar<T, false, true, false>

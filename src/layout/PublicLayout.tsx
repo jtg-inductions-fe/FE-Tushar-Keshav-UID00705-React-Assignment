@@ -8,7 +8,7 @@ import { ErrorView, Header, Sidebar } from '@components';
 import { SOMETHING_WENT_WRONG } from '@constant';
 import { MainErrorBoundary } from '@error';
 
-export default function PublicLayout() {
+export function PublicLayout() {
     const [headerHeight, setheaderHeight] = useState(0);
     const headerRef = useRef<HTMLElement | null>(null);
 

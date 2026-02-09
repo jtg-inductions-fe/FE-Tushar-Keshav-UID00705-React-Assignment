@@ -10,8 +10,10 @@ import {
     TypographyProps,
 } from '@mui/material';
 
+import { theme } from '@theme';
 
-export const CenteredStack = styled(Stack)<StackProps>(({}) => ({
+
+export const CenteredStack = styled(Stack)<StackProps>(() => ({
     alignItems: 'center',
     justifyContent: 'center',
 }));

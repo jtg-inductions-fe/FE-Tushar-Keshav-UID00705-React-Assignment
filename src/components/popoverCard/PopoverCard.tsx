@@ -1,17 +1,11 @@
-import { StyledAvatar, StyledCard } from 'components/styledComponent';
-
 import { Popover, Stack, Typography } from '@mui/material';
 
+import { StyledAvatar, StyledCard } from '@components';
 import { theme } from '@theme';
 
 import { UserCardProps } from './PopoverCard.types';
 
-export default function PopoverCard({
-    open,
-    anchorEl,
-    onClose,
-    user,
-}: UserCardProps) {
+export function PopoverCard({ open, anchorEl, onClose, user }: UserCardProps) {
     return (
         <Popover
             open={open}

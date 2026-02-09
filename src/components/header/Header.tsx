@@ -1,12 +1,15 @@
 import { useCallback, useState } from 'react';
 
-import PopoverCard from 'components/popoverCard/PopoverCard';
-import { SearchBar } from 'components/searchBar';
-import { CenteredStack, StyledAvatar } from 'components/styledComponent';
 import { useNavigate } from 'react-router-dom';
 
 import { Box, IconButton, Stack } from '@mui/material';
 
+import {
+    CenteredStack,
+    PopoverCard,
+    SearchBar,
+    StyledAvatar,
+} from '@components';
 import { theme } from '@theme';
 
 import { logoPath, userDetails } from './Header.constant';
@@ -18,7 +21,7 @@ import {
 } from './Header.styles';
 import { HeaderProps, Product } from './Header.types';
 
-export default function Header({ headerRef }: HeaderProps) {
+export function Header({ headerRef }: HeaderProps) {
     const navigate = useNavigate();
     const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
 
