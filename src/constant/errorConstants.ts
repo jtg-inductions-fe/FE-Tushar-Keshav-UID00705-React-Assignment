@@ -1,6 +1,6 @@
-import { ErrorDetails } from '@types';
+import { ErrorDetails } from '@typeDefs';
 
-export const somethingWentWrong: ErrorDetails = {
+export const SOMETHING_WENT_WRONG: ErrorDetails = {
     imgSrc: 'src/assets/images/something-went-wrong.png',
     title: 'Something has gone seriously wrong',
     subtext:
@@ -8,7 +8,7 @@ export const somethingWentWrong: ErrorDetails = {
     buttonText: 'Go back home',
 };
 
-export const pageNotFound: ErrorDetails = {
+export const PAGE_NOT_FOUND: ErrorDetails = {
     imgSrc: 'src/assets/svg/404.svg',
     title: 'Page not found',
     subtext:

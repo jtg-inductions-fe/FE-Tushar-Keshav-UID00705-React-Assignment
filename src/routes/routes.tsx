@@ -1,9 +1,9 @@
 import { createBrowserRouter, Navigate } from 'react-router';
 
-import RouterErrorBoundary from '@error/RouterErrorBoundary';
+import { RouterErrorBoundary } from '@error';
 import { PublicLayout } from '@layout';
 import { Dashboard } from '@pages/overview';
-import PageNotFound from '@pages/pageNotFound';
+import { PageNotFound } from '@pages/pageNotFound';
 
 import { PATHS } from './routes.constants';
 

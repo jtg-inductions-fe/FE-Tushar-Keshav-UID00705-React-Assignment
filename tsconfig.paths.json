@@ -6,10 +6,10 @@
             "@constant": ["constant/index"],
             "@theme": ["theme/index"],
             "@components": ["components/index"],
+            "@error": ["error/index"],
+            "@layout": ["layout/index"],
             "@pages/*": ["pages/*"],
-            "@error/*": ["error/*"],
-            "@typeDefs": ["types"],
-            "@layout": ["layout/index"]
+            "@typeDefs": ["types"]
         }
     }
 }

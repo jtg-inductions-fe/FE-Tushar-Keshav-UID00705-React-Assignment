@@ -58,12 +58,12 @@ export const components: Components = {
         },
     },
     MuiButton: {
-      styleOverrides: {
-        root: {
-          textTransform: 'none',
-          borderRadius: typography.typographyUtil.pxToRem(12),
-          padding: `${typography.typographyUtil.pxToRem(10)} ${typography.typographyUtil.pxToRem(16)}`
-        }
-      }
-    }
+        styleOverrides: {
+            root: {
+                textTransform: 'none',
+                borderRadius: typography.typographyUtil.pxToRem(12),
+                padding: `${typography.typographyUtil.pxToRem(10)} ${typography.typographyUtil.pxToRem(16)}`,
+            },
+        },
+    },
 };

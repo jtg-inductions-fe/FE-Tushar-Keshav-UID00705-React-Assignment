@@ -1,23 +1,20 @@
-import { StyledButton } from 'components/button';
-import { CenteredStack, StyledTypography } from 'components/styledComponent';
+import { Box, Button } from '@mui/material';
 
-import { Box } from '@mui/material';
-
+import { CenteredStack, StyledTypography } from '@components';
 import { theme } from '@theme';
-import { ErrorDetails } from '@types';
+import { ErrorDetails } from '@typeDefs';
 
-import { imgMaxWidth } from './ErrorView.constant';
-import { StyledStack } from './ErrorView.styles';
+import { IMG_MAX_WIDTH } from './ErrorView.constant';
 
-export default function ErrorView({
+export function ErrorView({
     imgSrc,
     title,
     subtext,
     buttonText,
 }: ErrorDetails) {
     return (
-        <StyledStack spacing={4} useFlexGap={true}>
-            <Box component="img" src={imgSrc} maxWidth={imgMaxWidth}></Box>
+        <CenteredStack spacing={4} useFlexGap={true} height='100%'>
+            <Box component="img" src={imgSrc} maxWidth={IMG_MAX_WIDTH}></Box>
             <CenteredStack spacing={5} useFlexGap={true}>
                 <CenteredStack spacing={2.5} useFlexGap={true}>
                     <StyledTypography variant="h1"> {title} </StyledTypography>
@@ -29,12 +26,9 @@ export default function ErrorView({
                     </StyledTypography>
                 </CenteredStack>
                 <CenteredStack>
-                    <StyledButton variant="contained">
-                        {' '}
-                        {buttonText}{' '}
-                    </StyledButton>
+                    <Button variant="contained"> {buttonText} </Button>
                 </CenteredStack>
             </CenteredStack>
-        </StyledStack>
+        </CenteredStack>
     );
 }

@@ -2,6 +2,10 @@ import React, { ReactNode } from 'react';
 
 import { ErrorState, FallbackProps } from './MainErrorBoundary.types';
 
+/**
+ * Base ErrorBoundary class, it renders the fallback component if provided
+ * else render nothing
+ */
 export class MainErrorBoundary extends React.Component<
     FallbackProps,
     ErrorState
