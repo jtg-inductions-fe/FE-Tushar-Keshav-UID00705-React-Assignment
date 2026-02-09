@@ -2,12 +2,11 @@
     "compilerOptions": {
         "baseUrl": "./src",
         "paths": {
-            "@fonts": ["assets/fonts/inter/index"],
+            "@assets/*": ["assets/*"],
             "@constant": ["constant/index"],
             "@theme": ["theme/index"],
             "@components": ["components/index"],
-            "@pages/overview": ["pages/overview"],
-            "@pages/pageNotFound": ["pages/pageNotFound"],
+            "@pages/*": ["pages/*"],
             "@error/*": ["error/*"],
             "@typeDefs": ["types"],
             "@layout": ["layout/index"]
