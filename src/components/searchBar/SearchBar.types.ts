@@ -1,6 +1,6 @@
-/*
-    It is a Conditional type, which can be a primitive or object with field id
-    used for the Option in search suggestion
+/**
+ * The base structure for any search option.
+ * Can be a simple `string` or an `object` with at least `id` and `name`.
  */
 export type BaseOption =
     | {

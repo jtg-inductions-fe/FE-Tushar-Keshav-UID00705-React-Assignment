@@ -11,11 +11,13 @@ import {
 } from './SearchBar.styles';
 import { BaseOption, SearchBarProps } from './SearchBar.types';
 
-/* 
-    Calls the
-    @param {GetUpdatedOptions<T>}: callback - any action user wants to perform on change of input
-    @returns AutoCompleteSearchBar JSX
-*/
+/**
+ * A search suggestion component that handles fetching and selecting options.
+ *
+ * @param {SearchBarProps<T>} props - The component props.
+ * @param {GetUpdatedOptions<T>} props.getOptions - Async function to fetch options based on input.
+ * @param {OnOptionSelect<T>} props.onOptionSelect - Callback triggered when an option is chosen.
+ */
 export function SearchBar<T extends BaseOption>({
     getOptions,
     onOptionSelect,
@@ -64,7 +66,9 @@ export function SearchBar<T extends BaseOption>({
                             ...params.InputProps,
                             startAdornment: (
                                 <StartInputAdornment position={'start'}>
-                                    <Search />
+                                    <Search
+                                        htmlColor={theme.palette.grey[500]}
+                                    />
                                 </StartInputAdornment>
                             ),
                             endAdornment: isLoading && (

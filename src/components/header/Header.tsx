@@ -5,13 +5,17 @@ import { SearchBar } from 'components/searchBar';
 import { CenteredStack, StyledAvatar } from 'components/styledComponent';
 import { useNavigate } from 'react-router-dom';
 
-import { CircleNotifications } from '@mui/icons-material';
-import { Box, IconButton, Stack, Toolbar } from '@mui/material';
+import { Box, IconButton, Stack } from '@mui/material';
 
 import { theme } from '@theme';
 
 import { logoPath, userDetails } from './Header.constant';
-import { StyledAppBar } from './Header.styles';
+import {
+    Logo,
+    StyledAppBar,
+    StyledNotificationIcon,
+    StyledToolbar,
+} from './Header.styles';
 import { Product } from './Header.types';
 
 export default function Header() {
@@ -42,14 +46,14 @@ export default function Header() {
 
     return (
         <StyledAppBar elevation={0}>
-            <Toolbar>
+            <StyledToolbar>
                 <Stack
                     direction={'row'}
                     flexGrow={1}
                     spacing={theme.spacing(8)}
                     useFlexGap={true}
                 >
-                    <Box component="img" src={logoPath}></Box>
+                    <Logo component="img" src={logoPath} alt={'logo'}></Logo>
                     <SearchBar<Product>
                         getOptions={getOptions}
                         onOptionSelect={onOptionSelect}
@@ -57,9 +61,10 @@ export default function Header() {
                 </Stack>
                 <Box flexGrow={1} />
                 <CenteredStack direction="row" spacing={3} useFlexGap={true}>
-                    <CircleNotifications
+                    <StyledNotificationIcon
                         fontSize={'large'}
-                        htmlColor={theme.palette.secondary.main}
+                        color="secondary"
+                        htmlColor="#000"
                     />
                     <IconButton onClick={handleOpen}>
                         <StyledAvatar src={userDetails.avatarPath} />
@@ -71,7 +76,7 @@ export default function Header() {
                         user={userDetails}
                     />
                 </CenteredStack>
-            </Toolbar>
+            </StyledToolbar>
         </StyledAppBar>
     );
 }

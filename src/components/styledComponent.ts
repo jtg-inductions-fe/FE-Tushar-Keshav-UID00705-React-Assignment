@@ -1,8 +1,6 @@
 import {
     Avatar,
     AvatarProps,
-    Box,
-    BoxProps,
     Card,
     CardProps,
     Stack,
@@ -11,8 +9,6 @@ import {
     Typography,
     TypographyProps,
 } from '@mui/material';
-
-import { theme } from '@theme';
 
 
 export const CenteredStack = styled(Stack)<StackProps>(({}) => ({
@@ -27,3 +23,14 @@ export const StyledTypography = styled(Typography)<TypographyProps>(
         textAlign: 'center',
     }),
 );
+
+export const StyledAvatar = styled(Avatar)<AvatarProps>(({theme}) => ({
+    width: theme.typography.pxToRem(32),
+    height: 'auto',
+    filter: `drop-shadow(0 ${theme.typography.pxToRem(6)} ${theme.typography.pxToRem(6)} rgba(0,0,0,0.25))`,
+}));
+
+export const StyledCard = styled(Card)<CardProps>(({theme}) => ({
+    padding: theme.spacing(4),
+}));
+

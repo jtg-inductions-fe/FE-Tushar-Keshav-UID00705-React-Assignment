@@ -8,9 +8,18 @@ import { useDebounce } from 'use-debounce';
 
 import { SearchHookState } from './types';
 
-/* 
-    A custom hook which tracks the search states
-    and provide callback to manipulate them
+/**
+ * A custom hook to manage the state and logic for a search suggestion system.
+ *
+ * @param {GetUpdatedOptions<T>} getOptions - An async function that fetches
+ * options whenever the search input changes.
+ *
+ * @returns {SearchHookState<T>} A tuple containing:
+ * - `isOpen`: Whether the suggestion dropdown should be visible.
+ * - `isLoading`: True while the `getOptions` promise is pending.
+ * - `options`: The current list of results fetched from `getOptions`.
+ * - `setInput`: Function to update the search query string.
+ * - `setOpen`: Function to manually toggle the dropdown state.
  */
 export function useSearch<T extends BaseOption>(
     getOptions: GetUpdatedOptions<T>,
