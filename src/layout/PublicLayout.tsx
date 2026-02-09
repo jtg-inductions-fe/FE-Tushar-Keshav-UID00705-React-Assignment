@@ -4,7 +4,7 @@ import { Box, Toolbar } from '@mui/material';
 
 import { ErrorView, Header, Sidebar } from '@components';
 import { SOMETHING_WENT_WRONG } from '@constant';
-import { MainErrorBoundary } from '@error/errorBoundary/MainErrorBoundary';
+import { MainErrorBoundary } from '@error';
 export function PublicLayout() {
     return (
         <Box display={'flex'}>
