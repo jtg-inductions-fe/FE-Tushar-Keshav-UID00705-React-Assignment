@@ -2,16 +2,14 @@ import { typography } from 'theme/foundations';
 
 import type { Components } from '@mui/material/styles';
 
-import {
-    InterBoldTTF,
-    InterBoldWOFF2,
-    InterLightTTF,
-    InterLightWOFF2,
-    InterMediumTTF,
-    InterMediumWOFF2,
-    InterRegularTTF,
-    InterRegularWOFF2
-} from '@assets/fonts';
+import InterBoldTTF from '@assets/fonts/inter/inter-bold.ttf';
+import InterBoldWOFF2 from '@assets/fonts/inter/inter-bold.woff2';
+import InterLightTTF from '@assets/fonts/inter/inter-light.ttf';
+import InterLightWOFF2 from '@assets/fonts/inter/inter-light.woff2';
+import InterMediumTTF from '@assets/fonts/inter/inter-medium.ttf';
+import InterMediumWOFF2 from '@assets/fonts/inter/inter-medium.woff2';
+import InterRegularTTF from '@assets/fonts/inter/inter-regular.ttf';
+import InterRegularWOFF2 from '@assets/fonts/inter/inter-regular.woff2';
 
 const fontFaceDeclarations = `
        @font-face {

@@ -1,5 +1,5 @@
-export const PATHS ={
+export const PATHS = {
     ROOT: '/',
     DASHBOARD: '/overview',
-    NOT_FOUND: '*'
+    NOT_FOUND: '*',
 }

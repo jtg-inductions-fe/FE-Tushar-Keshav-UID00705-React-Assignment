@@ -2,7 +2,7 @@ import { Toolbar, Typography } from '@mui/material';
 
 import { StyledAppBar } from './Header.styles';
 
-export default function Header() {
+export function Header() {
     return (
         <StyledAppBar>
             <Toolbar>
