@@ -1,7 +1,7 @@
 /* Custom Breakpoints*/
 declare module '@mui/material/styles' {
     interface BreakpointOverrides {
-        xs: false;
+        xs: true;
         sm: false;
         md: false;
         lg: false;

@@ -1,7 +1,7 @@
-import { Typography } from '@mui/material';
-import Grid2 from '@mui/material/Grid2';
+import { Grid2,Typography } from '@mui/material';
 
-export default function Dashboard() {
+export function Dashboard() {
+    // TODO: This is for the demo purpose
     return (
         <Grid2 container>
             <Typography variant="h1" color="primary">

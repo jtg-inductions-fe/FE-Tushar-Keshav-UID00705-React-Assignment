@@ -2,57 +2,57 @@ import { Drawer, DrawerProps, styled } from '@mui/material';
 
 import { theme } from '@theme';
 
-import { drawerWidth } from './Sidebar.constant';
+import { DRAWER_WIDTH } from './Sidebar.constant';
 
-/* 
-    It creates a sidebar with responsive width
-*/
+/**
+ * It creates a sidebar with responsive width
+ */
 export const StyledSidebar = styled(Drawer)<DrawerProps>(({}) => ({
-    width: drawerWidth.mobile,
+    width: DRAWER_WIDTH.mobile,
     flexShrink: 0,
 
     // It adds a breakpoint based width if it is provided.
-    ...(drawerWidth.tablet && {
-        [theme.breakpoints.up('tablet')]: { width: drawerWidth.tablet },
+    ...(DRAWER_WIDTH.tablet && {
+        [theme.breakpoints.up('tablet')]: { width: DRAWER_WIDTH.tablet },
     }),
 
-    ...(drawerWidth.smallDesktop && {
+    ...(DRAWER_WIDTH.smallDesktop && {
         [theme.breakpoints.up('smallDesktop')]: {
-            width: drawerWidth.smallDesktop,
+            width: DRAWER_WIDTH.smallDesktop,
         },
     }),
 
-    ...(drawerWidth.desktop && {
-        [theme.breakpoints.up('desktop')]: { width: drawerWidth.desktop },
+    ...(DRAWER_WIDTH.desktop && {
+        [theme.breakpoints.up('desktop')]: { width: DRAWER_WIDTH.desktop },
     }),
 
-    ...(drawerWidth.largeDesktop && {
+    ...(DRAWER_WIDTH.largeDesktop && {
         [theme.breakpoints.up('largeDesktop')]: {
-            width: drawerWidth.largeDesktop,
+            width: DRAWER_WIDTH.largeDesktop,
         },
     }),
 
     '& .MuiDrawer-paper': {
         boxSizing: 'border-box',
-        width: drawerWidth.mobile,
+        width: DRAWER_WIDTH.mobile,
 
-        ...(drawerWidth.tablet && {
-            [theme.breakpoints.up('tablet')]: { width: drawerWidth.tablet },
+        ...(DRAWER_WIDTH.tablet && {
+            [theme.breakpoints.up('tablet')]: { width: DRAWER_WIDTH.tablet },
         }),
 
-        ...(drawerWidth.smallDesktop && {
+        ...(DRAWER_WIDTH.smallDesktop && {
             [theme.breakpoints.up('smallDesktop')]: {
-                width: drawerWidth.smallDesktop,
+                width: DRAWER_WIDTH.smallDesktop,
             },
         }),
 
-        ...(drawerWidth.desktop && {
-            [theme.breakpoints.up('desktop')]: { width: drawerWidth.desktop },
+        ...(DRAWER_WIDTH.desktop && {
+            [theme.breakpoints.up('desktop')]: { width: DRAWER_WIDTH.desktop },
         }),
 
-        ...(drawerWidth.largeDesktop && {
+        ...(DRAWER_WIDTH.largeDesktop && {
             [theme.breakpoints.up('largeDesktop')]: {
-                width: drawerWidth.largeDesktop,
+                width: DRAWER_WIDTH.largeDesktop,
             },
         }),
     },

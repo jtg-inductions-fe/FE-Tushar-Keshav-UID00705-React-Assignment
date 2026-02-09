@@ -1,6 +1,6 @@
 import { ErrorView } from '@components';
-import { somethingWentWrong } from '@constant';
+import { SOMETHING_WENT_WRONG } from '@constant';
 
-export default function RouterErrorBoundary() {
-    return <ErrorView {...somethingWentWrong} />;
+export function RouterErrorBoundary() {
+    return <ErrorView {...SOMETHING_WENT_WRONG} />;
 }

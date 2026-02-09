@@ -7,7 +7,7 @@ import { CssBaseline, ThemeProvider } from '@mui/material';
 
 import { theme } from '@theme';
 
-import { router } from './routes';
+import { router } from './routes/routes';
 
 const rootElement = document.getElementById('root') as HTMLElement;
 

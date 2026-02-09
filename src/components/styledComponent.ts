@@ -1,6 +1,4 @@
 import {
-    Box,
-    BoxProps,
     Stack,
     StackProps,
     styled,
@@ -10,9 +8,6 @@ import {
 
 import { theme } from '@theme';
 
-export const FlexBox = styled(Box)<BoxProps>(({}) => ({
-    display: 'flex',
-}));
 
 export const CenteredStack = styled(Stack)<StackProps>(({}) => ({
     alignItems: 'center',

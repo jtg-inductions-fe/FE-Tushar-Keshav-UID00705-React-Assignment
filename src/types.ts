@@ -4,14 +4,11 @@ export type ErrorDetails = {
     subtext: string;
     buttonText: string;
 };
+
 export type ResponsiveWidth = {
     mobile: string;
     tablet?: string;
     smallDesktop?: string;
     desktop?: string;
     largeDesktop?: string;
-};
-export type Padding = {
-    paddingHorizontal: string;
-    paddingVertical: string;
 };
