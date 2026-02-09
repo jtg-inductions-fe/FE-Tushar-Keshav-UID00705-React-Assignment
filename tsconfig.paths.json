@@ -3,12 +3,12 @@
         "baseUrl": "./src",
         "paths": {
             "@assets/*": ["assets/*"],
+            "@pages/*": ["pages/*"],
             "@constant": ["constant/index"],
             "@theme": ["theme/index"],
             "@components": ["components/index"],
             "@error": ["error/index"],
             "@layout": ["layout/index"],
-            "@pages/*": ["pages/*"],
             "@typeDefs": ["types"]
         }
     }
