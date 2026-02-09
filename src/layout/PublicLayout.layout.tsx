@@ -8,7 +8,7 @@ import { MainErrorBoundary } from '@error';
 
 export function PublicLayout() {
     return (
-        <Box display='flex'>
+        <Box display="flex">
             <Header />
             <Sidebar />
             <Box component="main" height="100vh" flexGrow={1}>

@@ -13,7 +13,7 @@ export function ErrorView({
     buttonText,
 }: ErrorDetails) {
     return (
-        <CenteredStack spacing={4} useFlexGap={true} height='100%'>
+        <CenteredStack spacing={4} useFlexGap={true} height="100%">
             <Box component="img" src={imgSrc} maxWidth={IMG_MAX_WIDTH}></Box>
             <CenteredStack spacing={5} useFlexGap={true}>
                 <CenteredStack spacing={2.5} useFlexGap={true}>

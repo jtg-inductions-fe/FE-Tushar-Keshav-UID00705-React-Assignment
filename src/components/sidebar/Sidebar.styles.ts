@@ -5,7 +5,7 @@ import { DRAWER_WIDTH } from './Sidebar.constant';
 /**
  * It creates a sidebar with responsive width
  */
-export const StyledSidebar = styled(Drawer)<DrawerProps>(({theme}) => ({
+export const StyledSidebar = styled(Drawer)<DrawerProps>(({ theme }) => ({
     width: DRAWER_WIDTH.mobile,
     flexShrink: 0,
 
