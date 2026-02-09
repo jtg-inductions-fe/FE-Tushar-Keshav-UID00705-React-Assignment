@@ -7,7 +7,7 @@ import { SOMETHING_WENT_WRONG } from '@constant';
 import { MainErrorBoundary } from '@error/errorBoundary/MainErrorBoundary';
 export function PublicLayout() {
     return (
-        <Box display={'flex'}>
+        <Box display='flex'>
             <Header />
             <Sidebar />
             <Box component="main" height="100vh" flexGrow={1}>

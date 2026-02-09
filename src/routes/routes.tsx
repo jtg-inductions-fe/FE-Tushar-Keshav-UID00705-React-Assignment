@@ -15,7 +15,7 @@ export const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <Navigate to="/overview" replace />, 
+                element: <Navigate to={PATHS.DASHBOARD} replace />, 
             },
             {
                 path: PATHS.DASHBOARD,
@@ -23,7 +23,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: PATHS.NOT_FOUND,
-                element: <PageNotFound />,
+                Component: PageNotFound,
             },
         ],
     },

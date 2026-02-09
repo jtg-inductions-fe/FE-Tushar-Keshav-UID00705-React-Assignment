@@ -1,3 +1,5 @@
+import { typography } from 'theme/foundations';
+
 import type { Components } from '@mui/material/styles';
 
 import {
@@ -9,8 +11,7 @@ import {
     InterMediumWOFF2,
     InterRegularTTF,
     InterRegularWOFF2
-} from '@fonts';
-import { theme } from '@theme';
+} from '@assets/fonts';
 
 const fontFaceDeclarations = `
        @font-face {
@@ -20,7 +21,7 @@ const fontFaceDeclarations = `
         font-weight: 500;
         src: url(${InterRegularWOFF2}) format('woff2'), 
         url(${InterRegularTTF}) format('truetype');
-      };
+      }
       @font-face {
         font-display: swap; 
         font-family: 'Inter';
@@ -28,7 +29,7 @@ const fontFaceDeclarations = `
         font-weight: 600;
         src: url(${InterMediumWOFF2}) format('woff2'), 
         url(${InterMediumTTF}) format('truetype');
-      };
+      }
       @font-face {
         font-display: swap; 
         font-family: 'Inter';
@@ -36,7 +37,7 @@ const fontFaceDeclarations = `
         font-weight: 700;
         src: url(${InterBoldWOFF2}) format('woff2'), 
         url(${InterBoldTTF}) format('truetype');
-      };
+      }
       @font-face {
         font-display: swap; 
         font-family: 'Inter';
@@ -44,7 +45,7 @@ const fontFaceDeclarations = `
         font-weight: 400;
         src: url(${InterLightWOFF2}) format('woff2'), 
         url(${InterLightTTF}) format('truetype');
-      };
+      }
     `;
 
 export const components: Components = {
@@ -60,8 +61,8 @@ export const components: Components = {
       styleOverrides: {
         root: {
           textTransform: 'none',
-          borderRadius: theme.typography.pxToRem(12),
-          padding: `${theme.typography.pxToRem(10)} ${theme.typography.pxToRem(16)}`
+          borderRadius: typography.typographyUtil.pxToRem(12),
+          padding: `${typography.typographyUtil.pxToRem(10)} ${typography.typographyUtil.pxToRem(16)}`
         }
       }
     }

@@ -1,4 +1,4 @@
-import { Grid2,Typography } from '@mui/material';
+import { Grid2, Typography } from '@mui/material';
 
 export function Dashboard() {
     // TODO: This is for the demo purpose

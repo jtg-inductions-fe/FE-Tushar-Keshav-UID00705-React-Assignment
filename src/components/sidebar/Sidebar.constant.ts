@@ -1,4 +1,4 @@
-import { ResponsiveWidth } from '@types';
+import { ResponsiveWidth } from '@typeDefs';
 
 export const DRAWER_WIDTH: ResponsiveWidth = {
     mobile: '100%',
