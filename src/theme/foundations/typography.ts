@@ -16,7 +16,6 @@ const typographyUtil: TypographyUtils = {
     pxToRem: (px: number) => `${px / HTML_FONT_SIZE}` + 'rem',
 };
 
-// TODO: Add the necessary typographies here.
 /**
  * Creates a typography block with various styles
  * @param theme - Theme object to access the breakpoints.
@@ -29,16 +28,67 @@ const typographyStyle = (theme: Theme): TypographyOptions => ({
     fontWeightLight: 400,
     fontWeightRegular: 500,
     fontWeightMedium: 600,
+    fontWeightBold: 700,
 
     h1: {
         fontSize: typographyUtil.pxToRem(30),
         fontWeight: 700,
         lineHeight: typographyUtil.pxToRem(45),
 
-        [theme.breakpoints.up('md')]: {
+        [theme.breakpoints.up('tablet')]: {
             fontSize: typographyUtil.pxToRem(48),
             lineHeight: typographyUtil.pxToRem(62.5),
         },
+    },
+    h2: {
+        fontSize: typographyUtil.pxToRem(20),
+        fontWeight: 600,
+        lineHeight: typographyUtil.pxToRem(30),
+    },
+    h3: {
+        fontSize: typographyUtil.pxToRem(16),
+        fontWeight: 600,
+        lineHeight: typographyUtil.pxToRem(24),
+    },
+    subtitle1: {
+        fontSize: typographyUtil.pxToRem(12),
+        fontWeight: 400,
+        lineHeight: typographyUtil.pxToRem(18),
+    },
+    subtitle2: {
+        fontSize: typographyUtil.pxToRem(16),
+        fontWeight: 500,
+        lineHeight: typographyUtil.pxToRem(24),
+    },
+    body1: {
+        fontSize: typographyUtil.pxToRem(16),
+        fontWeight: 400,
+        lineHeight: typographyUtil.pxToRem(24),
+    },
+    body2: {
+        fontSize: typographyUtil.pxToRem(12),
+        fontWeight: 400,
+        lineHeight: typographyUtil.pxToRem(18),
+
+        [theme.breakpoints.up('tablet')]: {
+            fontSize: typographyUtil.pxToRem(14),
+            lineHeight: typographyUtil.pxToRem(20),
+        },
+    },
+    button: {
+        fontSize: typographyUtil.pxToRem(14),
+        fontWeight: 600,
+        lineHeight: typographyUtil.pxToRem(14),
+    },
+    caption: {
+        fontSize: typographyUtil.pxToRem(12),
+        fontWeight: 500,
+        lineHeight: typographyUtil.pxToRem(18),
+    },
+    overline: {
+        fontSize: typographyUtil.pxToRem(12),
+        fontWeight: 600,
+        lineHeight: typographyUtil.pxToRem(18),
     },
 });
 

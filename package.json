@@ -20,7 +20,8 @@
         "@mui/icons-material": "6.4.1",
         "@mui/material": "6.4.1",
         "react": "19.0.0",
-        "react-dom": "19.0.0"
+        "react-dom": "19.0.0",
+        "react-router-dom": "^7.13.0"
     },
     "devDependencies": {
         "@types/eslint-plugin-jsx-a11y": "6",
@@ -46,5 +47,6 @@
         "vite": "6.0.11",
         "vite-plugin-image-optimizer": "1.1.8",
         "vite-tsconfig-paths": "5.1.4"
-    }
+    },
+    "packageManager": "yarn@4.12.0"
 }

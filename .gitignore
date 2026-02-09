@@ -5,10 +5,11 @@ yarn-debug.log*
 yarn-error.log*
 
 # Files
-.yarn
 node_modules
 dist
 .env
+tsconfig.node.tsbuildinfo
+.yarn
 
 # Editor directories and files
 !.vscode/extensions.json
