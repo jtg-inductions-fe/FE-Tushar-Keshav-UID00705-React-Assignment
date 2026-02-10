@@ -8,7 +8,7 @@ import { IMG_MAX_WIDTH } from './ErrorView.constant';
 export function ErrorView({ error, onClick }: ErrorDetailsProp) {
     const theme = useTheme();
     return (
-        <CenteredStack spacing={4} useFlexGap={true} height="100%">
+        <CenteredStack spacing={4} useFlexGap={true} height="100vh">
             <Box
                 component="img"
                 src={error.imgSrc}

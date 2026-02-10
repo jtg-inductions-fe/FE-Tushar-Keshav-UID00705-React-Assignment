@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import { ErrorView } from '@components';
 import { PAGE_NOT_FOUND } from '@constant';
@@ -8,5 +8,8 @@ export function PageNotFound() {
     const onClick = () => {
         void navigate('/');
     };
+    
+    const location = useLocation();
+    console.error("Invalid path accessed", location.pathname);
     return <ErrorView error={{ ...PAGE_NOT_FOUND }} onClick={onClick} />;
 }

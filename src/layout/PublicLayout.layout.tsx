@@ -12,23 +12,26 @@ export function PublicLayout() {
         void navigate('/');
     };
     return (
+    <MainErrorBoundary fallback={
+                <ErrorView
+                    error={{ ...SOMETHING_WENT_WRONG }}
+                    onClick={onClick}
+                />
+            }
+        >
         <Box display="flex" height="100vh" flexDirection="column">
-            <Header />
+            <MainErrorBoundary>
+                <Header />
+            </MainErrorBoundary>
             <Box display="flex" flexGrow={1}>
-                <Sidebar />
+                <MainErrorBoundary>
+                    <Sidebar />
+                </MainErrorBoundary>
                 <Box component="main" flexGrow={1}>
-                    <MainErrorBoundary
-                        fallback={
-                            <ErrorView
-                                error={{ ...SOMETHING_WENT_WRONG }}
-                                onClick={onClick}
-                            />
-                        }
-                    >
                         <Outlet />
-                    </MainErrorBoundary>
                 </Box>
             </Box>
         </Box>
+    </MainErrorBoundary>
     );
 }
