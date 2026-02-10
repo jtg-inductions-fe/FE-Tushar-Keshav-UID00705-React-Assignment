@@ -1,0 +1,1 @@
+export { MainErrorBoundary } from './MainErrorBoundary';

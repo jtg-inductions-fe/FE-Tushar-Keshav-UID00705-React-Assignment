@@ -15,5 +15,5 @@ export {
     InterMediumTTF,
     InterMediumWOFF2,
     InterRegularTTF,
-    InterRegularWOFF2
+    InterRegularWOFF2,
 };

@@ -3,13 +3,13 @@
         "baseUrl": "./src",
         "paths": {
             "@assets/*": ["assets/*"],
+            "@pages": ["pages/index"],
             "@constant": ["constant/index"],
             "@theme": ["theme/index"],
             "@components": ["components/index"],
-            "@pages/*": ["pages/*"],
-            "@error/*": ["error/*"],
-            "@typeDefs": ["types"],
-            "@layout": ["layout/index"]
+            "@error": ["error/index"],
+            "@layout": ["layout/index"],
+            "@typeDefs": ["types"]
         }
     }
 }

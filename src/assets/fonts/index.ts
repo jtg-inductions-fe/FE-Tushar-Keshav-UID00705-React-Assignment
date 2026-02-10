@@ -6,5 +6,5 @@ export {
     InterMediumTTF,
     InterMediumWOFF2,
     InterRegularTTF,
-    InterRegularWOFF2
-} from './inter'
+    InterRegularWOFF2,
+} from './inter';

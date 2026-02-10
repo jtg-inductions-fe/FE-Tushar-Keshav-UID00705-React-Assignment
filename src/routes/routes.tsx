@@ -1,9 +1,8 @@
 import { createBrowserRouter, Navigate } from 'react-router';
 
-import RouterErrorBoundary from '@error/RouterErrorBoundary';
+import { RouterErrorBoundary } from '@error';
 import { PublicLayout } from '@layout';
-import { Dashboard } from '@pages/overview';
-import PageNotFound from '@pages/pageNotFound';
+import { Dashboard, PageNotFound } from '@pages';
 
 import { PATHS } from './routes.constants';
 
@@ -15,16 +14,17 @@ export const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <Navigate to={PATHS.DASHBOARD} replace />, 
+                element: <Navigate to={PATHS.DASHBOARD} replace />,
             },
             {
                 path: PATHS.DASHBOARD,
                 Component: Dashboard,
             },
-            {
-                path: PATHS.NOT_FOUND,
-                Component: PageNotFound,
-            },
+            
         ],
     },
+    {
+        path: PATHS.NOT_FOUND,
+        Component: PageNotFound,
+    }
 ]);

@@ -8,8 +8,8 @@ yarn-error.log*
 node_modules
 dist
 .env
+.yarn/*
 tsconfig.node.tsbuildinfo
-.yarn
 
 # Editor directories and files
 !.vscode/extensions.json
