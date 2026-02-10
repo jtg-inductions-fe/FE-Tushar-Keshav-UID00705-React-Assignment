@@ -12,7 +12,9 @@ export type BaseOption =
 export type GetUpdatedOptions<T extends BaseOption> = (
     input: string,
 ) => Promise<T[]>;
+
 export type OnOptionSelect<T extends BaseOption> = (input: T) => Promise<void>;
+
 export interface SearchBarProps<T extends BaseOption> {
     getOptions: GetUpdatedOptions<T>;
     onOptionSelect: OnOptionSelect<T>;

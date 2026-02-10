@@ -1,5 +1,8 @@
 import { BaseOption } from 'components/searchBar/SearchBar.types';
 
+/**
+ * A type which extends the BaseOption for search bar
+ */
 export type Product = Extract<
     BaseOption,
     {
@@ -10,8 +13,4 @@ export type Product = Extract<
     id: number;
     tags: string;
     sales: number;
-};
-
-export type HeaderProps = {
-    headerRef: React.RefObject<HTMLElement | null>;
 };

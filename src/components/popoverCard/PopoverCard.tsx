@@ -1,11 +1,21 @@
-import { Popover, Stack, Typography } from '@mui/material';
+import { Popover, Stack, Typography, useTheme } from '@mui/material';
 
 import { StyledAvatar, StyledCard } from '@components';
-import { theme } from '@theme';
 
 import { UserCardProps } from './PopoverCard.types';
 
+/**
+ * A pop over card which gets attached to a element 
+ * @param {UserCardProps} props: 
+ * @param {boolean} open - Whether the popover card is open or closed
+ * @param {HTMLElement} anchorEl - HTML element with which it gets linked
+ * @param {() => void} onClose - Callback, called when the card closes
+ * @param {UserProfile} user - Details of the user to show when the card is opened
+ * @returns 
+ */
 export function PopoverCard({ open, anchorEl, onClose, user }: UserCardProps) {
+    const theme = useTheme();
+    
     return (
         <Popover
             open={open}

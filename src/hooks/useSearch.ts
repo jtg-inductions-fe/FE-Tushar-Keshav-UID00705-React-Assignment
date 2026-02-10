@@ -61,7 +61,7 @@ export function useSearch<T extends BaseOption>(
         return () => {
             active = false;
         };
-    }, [debounceValue, getOptions]);
+    }, [debounceValue]);
 
     return [open, isLoading, options, setInput, setOpen];
 }

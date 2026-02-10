@@ -9,6 +9,7 @@ export type ErrorDetailsProp = {
     error: ErrorDetails;
     onClick: () => void;
 };
+
 export type ResponsiveWidth = {
     mobile: string;
     tablet?: string;

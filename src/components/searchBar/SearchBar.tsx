@@ -1,8 +1,7 @@
 import { Search } from '@mui/icons-material';
-import { CircularProgress, InputAdornment } from '@mui/material';
+import { CircularProgress, InputAdornment, useTheme } from '@mui/material';
 
 import { useSearch } from '@hooks';
-import { theme } from '@theme';
 
 import {
     StartInputAdornment,
@@ -24,6 +23,8 @@ export function SearchBar<T extends BaseOption>({
 }: SearchBarProps<T>) {
     const [open, isLoading, options, setInput, setOpen] =
         useSearch<T>(getOptions);
+        
+    const theme = useTheme();
 
     return (
         <StyledSearchBar<T, false, true, false>
