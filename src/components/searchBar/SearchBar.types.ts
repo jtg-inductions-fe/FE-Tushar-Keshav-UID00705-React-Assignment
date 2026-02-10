@@ -4,7 +4,7 @@
  */
 export type BaseOption =
     | {
-          id: unknown;
+          id: number | string;
           name: string;
       }
     | string;

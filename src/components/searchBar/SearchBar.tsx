@@ -23,7 +23,7 @@ export function SearchBar<T extends BaseOption>({
 }: SearchBarProps<T>) {
     const [open, isLoading, options, setInput, setOpen] =
         useSearch<T>(getOptions);
-        
+
     const theme = useTheme();
 
     return (
@@ -38,7 +38,7 @@ export function SearchBar<T extends BaseOption>({
             noOptionsText={'No results found'}
             filterOptions={(x) => x}
             isOptionEqualToValue={(option: T, value: T) => {
-                if (typeof option == 'object' && typeof value == 'object') {
+                if (typeof option === 'object' && typeof value === 'object') {
                     return option.id === value.id;
                 }
                 return option === value;
@@ -46,8 +46,9 @@ export function SearchBar<T extends BaseOption>({
             onChange={(_, value, reason) => {
                 if (reason == 'blur') {
                     setInput('');
+                } else {
+                    void onOptionSelect(value);
                 }
-                void onOptionSelect(value);
             }}
             getOptionLabel={(option) => {
                 if (typeof option == 'string') {

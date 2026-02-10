@@ -10,10 +10,11 @@ export function PageNotFound() {
     const onClick = () => {
         void navigate('/');
     };
-    
+
     const location = useLocation();
-    useEffect(()=> {
-        console.error("Invalid path accessed", location.pathname)
+    useEffect(() => {
+        // eslint-disable-next-line no-console
+        console.error('Invalid path accessed', location.pathname);
     }, [location.pathname]);
     return <ErrorView error={{ ...PAGE_NOT_FOUND }} onClick={onClick} />;
 }

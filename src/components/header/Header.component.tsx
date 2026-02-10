@@ -24,7 +24,6 @@ import { Product } from './Header.types';
  * @returns returns the Header JSX
  */
 export function Header() {
-    
     const theme = useTheme();
     const navigate = useNavigate();
 
@@ -39,9 +38,12 @@ export function Header() {
     );
 
     // Callback for search bar when a particular option is selected
-    const onOptionSelect = useCallback(async (option: Product) => {
-        await navigate(`product/${option.name}`);
-    }, []);
+    const onOptionSelect = useCallback(
+        async (option: Product) => {
+            await navigate(`product/${option.name}`);
+        },
+        [navigate],
+    );
 
     // Callback for search bar to get `Options` from input string
     const getOptions = useCallback(

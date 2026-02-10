@@ -1,5 +1,4 @@
 import { createTheme } from '@mui/material';
-import shadows from '@mui/material/styles/shadows';
 
 import { SCALING_FACTOR } from '@constant';
 
@@ -29,7 +28,6 @@ theme = createTheme(theme, {
     typography: {
         ...typography.typographyStyle(theme),
     },
-    shadows,
 });
 
 export { theme };

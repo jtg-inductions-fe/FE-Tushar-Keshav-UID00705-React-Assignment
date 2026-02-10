@@ -6,7 +6,7 @@ import { BaseOption } from 'components/searchBar/SearchBar.types';
 export type Product = Extract<
     BaseOption,
     {
-        id: unknown;
+        id: number | string;
         name: string;
     }
 > & {
