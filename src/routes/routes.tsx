@@ -2,8 +2,7 @@ import { createBrowserRouter, Navigate } from 'react-router';
 
 import { RouterErrorBoundary } from '@error';
 import { PublicLayout } from '@layout';
-import { Dashboard } from '@pages/overview';
-import { PageNotFound } from '@pages/pageNotFound';
+import { Dashboard, PageNotFound } from '@pages';
 
 import { PATHS } from './routes.constants';
 

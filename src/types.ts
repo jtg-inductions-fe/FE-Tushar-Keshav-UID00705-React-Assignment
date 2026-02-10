@@ -5,6 +5,10 @@ export type ErrorDetails = {
     buttonText: string;
 };
 
+export type ErrorDetailsProp = {
+    error: ErrorDetails;
+    onClick: () => void;
+};
 export type ResponsiveWidth = {
     mobile: string;
     tablet?: string;

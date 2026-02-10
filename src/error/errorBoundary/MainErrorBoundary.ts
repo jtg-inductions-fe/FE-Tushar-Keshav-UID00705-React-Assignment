@@ -17,9 +17,11 @@ export class MainErrorBoundary extends React.Component<
         return { hasError: true };
     }
     render(): ReactNode {
+        // Check if the state has error return fallback component if provided else null
         if (this.state.hasError) {
             return this.props.fallback ?? null;
         }
+        // return child component in case of no error found
         return this.props.children;
     }
 }

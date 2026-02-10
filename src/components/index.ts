@@ -1,4 +1,4 @@
-export { Header } from './header/index';
-export { Sidebar } from './sidebar/index';
-export { ErrorView } from './errorView/index';
+export { Header } from './header';
+export { Sidebar } from './sidebar';
+export { ErrorView } from './errorView';
 export { CenteredStack, StyledTypography } from './styledComponent';
