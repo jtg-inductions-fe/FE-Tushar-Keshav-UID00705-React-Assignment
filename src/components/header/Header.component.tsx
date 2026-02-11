@@ -2,6 +2,7 @@ import { useCallback, useState } from 'react';
 
 import { useNavigate } from 'react-router-dom';
 
+import { Notes } from '@mui/icons-material';
 import { Box, IconButton, Stack, useTheme } from '@mui/material';
 
 import {
@@ -14,7 +15,7 @@ import {
 import { logoPath, userDetails } from './Header.constant';
 import {
     Logo,
-    MenuIcon,
+    MenuButton,
     StyledAppBar,
     StyledNotificationIcon,
     StyledToolbar,
@@ -56,7 +57,7 @@ export function Header({ onMenuClick }: HeaderProps) {
     );
 
     return (
-        <StyledAppBar elevation={0} position="static">
+        <StyledAppBar elevation={0}>
             <StyledToolbar>
                 <Stack
                     direction={'row'}
@@ -65,9 +66,9 @@ export function Header({ onMenuClick }: HeaderProps) {
                     useFlexGap={true}
                 >
                     <Logo component="img" src={logoPath} alt="logo"></Logo>
-                    <IconButton onClick={onMenuClick}>
-                        <MenuIcon fontSize="large" htmlColor="secondary" />
-                    </IconButton>
+                    <MenuButton onClick={onMenuClick}>
+                        <Notes fontSize="large" htmlColor="secondary" />
+                    </MenuButton>
                     <SearchBar<Product>
                         getOptions={getOptions}
                         onOptionSelect={onOptionSelect}

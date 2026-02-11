@@ -1,6 +1,7 @@
 import { SidebarMenu } from 'components/sidebarMenu';
+import { HEADER_HEIGHT } from 'constant/stylesConstnats';
 
-import { useMediaQuery, useTheme } from '@mui/material';
+import { Box, useMediaQuery, useTheme } from '@mui/material';
 
 import { SIDEBAR_MENU_ITEM_DETAILS } from './Sidebar.constant';
 import { StyledSidebar } from './Sidebar.styles';
@@ -16,7 +17,10 @@ export function Sidebar({ isMenuOpen }: SidebarProps) {
             variant={isTablet ? 'permanent' : 'temporary'}
             anchor="left"
         >
-            <SidebarMenu groups={SIDEBAR_MENU_ITEM_DETAILS}></SidebarMenu>
+            <Box height={HEADER_HEIGHT} />
+            <Box overflow="auto">
+                <SidebarMenu groups={SIDEBAR_MENU_ITEM_DETAILS} />
+            </Box>
         </StyledSidebar>
     );
 }

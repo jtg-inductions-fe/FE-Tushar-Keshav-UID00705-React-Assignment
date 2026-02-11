@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import { HEADER_HEIGHT } from 'constant/stylesConstnats';
 import { Outlet, useNavigate } from 'react-router-dom';
 
 import { Box } from '@mui/material';
@@ -25,15 +26,16 @@ export function PublicLayout() {
                 />
             }
         >
-            <Box display="flex" height="100vh" flexDirection="column">
+            <Box height="100vh" display="flex">
                 <MainErrorBoundary>
                     <Header onMenuClick={() => setMenuState(!isMenuOpen)} />
                 </MainErrorBoundary>
-                <Box display="flex" flexGrow={1}>
-                    <MainErrorBoundary>
-                        <Sidebar isMenuOpen={isMenuOpen} />
-                    </MainErrorBoundary>
-                    <Box component="main" flexGrow={1}>
+                <MainErrorBoundary>
+                    <Sidebar isMenuOpen={isMenuOpen} />
+                </MainErrorBoundary>
+                <Box component="main" flexGrow={1}>
+                    <Box height={HEADER_HEIGHT} />
+                    <Box overflow="auto">
                         <Outlet />
                     </Box>
                 </Box>
