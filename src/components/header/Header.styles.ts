@@ -1,4 +1,6 @@
-import { CircleNotifications } from '@mui/icons-material';
+import { DROP_SHADOW } from 'constant/stylesConstnats';
+
+import { CircleNotifications, Notes } from '@mui/icons-material';
 import {
     AppBar,
     AppBarProps,
@@ -21,12 +23,21 @@ export const StyledToolbar = styled(Toolbar)<ToolbarProps>(() => ({
     minHeight: 0,
 }));
 
-export const StyledNotificationIcon = styled(CircleNotifications)(
-    ({ theme }) => ({
-        filter: `drop-shadow(0 ${theme.typography.pxToRem(6)} ${theme.typography.pxToRem(6)} rgba(0,0,0,0.25))`,
-    }),
-);
+export const StyledNotificationIcon = styled(CircleNotifications)(() => ({
+    filter: DROP_SHADOW,
+}));
 
 export const Logo = styled(Box)<BoxProps>(({ theme }) => ({
-    filter: `drop-shadow(0 ${theme.typography.pxToRem(6)} ${theme.typography.pxToRem(6)} rgba(0,0,0,0.25))`,
+    filter: DROP_SHADOW,
+    display: 'none',
+
+    [theme.breakpoints.up('tablet')]: {
+        display: 'block',
+    },
 })) as typeof Box;
+
+export const MenuIcon = styled(Notes)(({ theme }) => ({
+    [theme.breakpoints.up('tablet')]: {
+        display: 'none',
+    },
+}));

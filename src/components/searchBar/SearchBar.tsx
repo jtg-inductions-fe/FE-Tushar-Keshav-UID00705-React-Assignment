@@ -51,7 +51,7 @@ export function SearchBar<T extends BaseOption>({
                 }
             }}
             getOptionLabel={(option) => {
-                if (typeof option == 'string') {
+                if (typeof option === 'string') {
                     return option;
                 } else {
                     return option.name;

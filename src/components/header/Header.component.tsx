@@ -14,16 +14,17 @@ import {
 import { logoPath, userDetails } from './Header.constant';
 import {
     Logo,
+    MenuIcon,
     StyledAppBar,
     StyledNotificationIcon,
     StyledToolbar,
 } from './Header.styles';
-import { Product } from './Header.types';
+import { HeaderProps, Product } from './Header.types';
 
 /**
  * @returns returns the Header JSX
  */
-export function Header() {
+export function Header({ onMenuClick }: HeaderProps) {
     const theme = useTheme();
     const navigate = useNavigate();
 
@@ -38,12 +39,9 @@ export function Header() {
     );
 
     // Callback for search bar when a particular option is selected
-    const onOptionSelect = useCallback(
-        async (option: Product) => {
-            await navigate(`product/${option.name}`);
-        },
-        [navigate],
-    );
+    const onOptionSelect = useCallback(async (option: Product) => {
+        await navigate(`product/${option.name}`);
+    }, []);
 
     // Callback for search bar to get `Options` from input string
     const getOptions = useCallback(
@@ -66,7 +64,10 @@ export function Header() {
                     spacing={theme.spacing(8)}
                     useFlexGap={true}
                 >
-                    <Logo component="img" src={logoPath} alt={'logo'}></Logo>
+                    <Logo component="img" src={logoPath} alt="logo"></Logo>
+                    <IconButton onClick={onMenuClick}>
+                        <MenuIcon fontSize="large" htmlColor="secondary" />
+                    </IconButton>
                     <SearchBar<Product>
                         getOptions={getOptions}
                         onOptionSelect={onOptionSelect}
@@ -75,9 +76,8 @@ export function Header() {
                 <Box flexGrow={1} />
                 <CenteredStack direction="row" spacing={3} useFlexGap={true}>
                     <StyledNotificationIcon
-                        fontSize={'large'}
+                        fontSize="large"
                         color="secondary"
-                        htmlColor="#000"
                     />
                     <IconButton onClick={handleOpen}>
                         <StyledAvatar src={userDetails.avatarPath} />

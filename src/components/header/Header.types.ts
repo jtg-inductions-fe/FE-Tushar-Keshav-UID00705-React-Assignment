@@ -11,6 +11,10 @@ export type Product = Extract<
     }
 > & {
     id: number;
-    tags: string;
+    tags: string[];
     sales: number;
 };
+
+export interface HeaderProps {
+    onMenuClick: () => void;
+}
