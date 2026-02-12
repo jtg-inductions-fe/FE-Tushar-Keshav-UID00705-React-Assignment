@@ -15,6 +15,6 @@ export type Product = Extract<
     sales: number;
 };
 
-export interface HeaderProps {
+export type HeaderProps = {
     onMenuClick: () => void;
-}
+};

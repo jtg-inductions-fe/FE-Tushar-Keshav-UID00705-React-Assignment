@@ -1,4 +1,4 @@
-import { Drawer, DrawerProps, styled } from '@mui/material';
+import { Box, BoxProps, Drawer, DrawerProps, styled } from '@mui/material';
 
 import { DRAWER_WIDTH } from './Sidebar.constant';
 
@@ -7,7 +7,6 @@ import { DRAWER_WIDTH } from './Sidebar.constant';
  */
 export const StyledSidebar = styled(Drawer)<DrawerProps>(({ theme }) => ({
     width: DRAWER_WIDTH.mobile,
-    flexShrink: 0,
 
     // It adds a breakpoint based width if it is provided.
     ...(DRAWER_WIDTH.tablet && {
@@ -31,7 +30,6 @@ export const StyledSidebar = styled(Drawer)<DrawerProps>(({ theme }) => ({
     }),
 
     '& .MuiDrawer-paper': {
-        boxSizing: 'border-box',
         width: DRAWER_WIDTH.mobile,
 
         ...(DRAWER_WIDTH.tablet && {
@@ -56,4 +54,10 @@ export const StyledSidebar = styled(Drawer)<DrawerProps>(({ theme }) => ({
             },
         }),
     },
+}));
+
+export const ScrollableBox = styled(Box)<BoxProps>(() => ({
+    overflowY: 'auto',
+    overflowX: 'clip',
+    scrollbarGutter: 'stable',
 }));

@@ -1,31 +1,61 @@
 import { ExpandMore } from '@mui/icons-material';
-import { List, ListItem } from '@mui/material';
+import { ListItem } from '@mui/material';
 
-import { StyledAccordion, StyledAccordionSummary } from './SidebarMenu.styles';
-import { SidebarMenuItemDetails } from './SidebarMenu.types';
+import {
+    StyledAccordion,
+    StyledAccordionDetails,
+    StyledAccordionSummary,
+    StyledList,
+} from './SidebarMenu.styles';
+import { SidebarMenuListProps } from './SidebarMenu.types';
 import { SidebarMenuListItem } from './SidebarMenuListItem.component';
 
-export function SidebarMenuList(sideBarItem: SidebarMenuItemDetails) {
-    if (sideBarItem.childrens) {
-        const subMenu = sideBarItem.childrens.map((childItem) =>
-            SidebarMenuList(childItem),
-        );
+export function SidebarMenuList({
+    item,
+    onMenuItemClick,
+    activeAccordionId,
+    onAccordionClick,
+}: SidebarMenuListProps) {
+    if (item.childrens) {
+        const subMenu = item.childrens.map((childItem) => (
+            <SidebarMenuList
+                key={childItem.id}
+                activeAccordionId={activeAccordionId}
+                onAccordionClick={onAccordionClick}
+                item={childItem}
+                onMenuItemClick={onMenuItemClick}
+            />
+        ));
         return (
-            <ListItem key={sideBarItem.id}>
-                <StyledAccordion elevation={0}>
+            <ListItem>
+                <StyledAccordion
+                    elevation={0}
+                    disableGutters
+                    square
+                    expanded={activeAccordionId == item.id}
+                    onChange={() => onAccordionClick(item.id)}
+                >
                     <StyledAccordionSummary expandIcon={<ExpandMore />}>
                         <SidebarMenuListItem
-                            item={sideBarItem}
+                            key={item.id}
+                            onMenuItemClick={() => {}}
+                            item={item}
                             disablePadding={true}
                         />
                     </StyledAccordionSummary>
-                    <StyledAccordionSummary>
-                        <List disablePadding={true}>{subMenu}</List>
-                    </StyledAccordionSummary>
+                    <StyledAccordionDetails>
+                        <StyledList disablePadding={true}>{subMenu}</StyledList>
+                    </StyledAccordionDetails>
                 </StyledAccordion>
             </ListItem>
         );
     } else {
-        return <SidebarMenuListItem item={sideBarItem} />;
+        return (
+            <SidebarMenuListItem
+                key={item.id}
+                item={item}
+                onMenuItemClick={onMenuItemClick}
+            />
+        );
     }
 }

@@ -6,6 +6,8 @@ import {
     AccordionSummary,
     AccordionSummaryProps,
     List,
+    ListItemButton,
+    ListItemButtonProps,
     ListProps,
     styled,
 } from '@mui/material';
@@ -16,12 +18,14 @@ export const StyledAccordion = styled(Accordion)<AccordionProps>(() => ({
 
 export const StyledAccordionSummary = styled(
     AccordionSummary,
-)<AccordionSummaryProps>(() => ({
+)<AccordionSummaryProps>(({ theme }) => ({
     padding: 0,
     minHeight: 0,
-
+    boxShadow: 'none',
     '&.Mui-expanded': {
         minHeight: 0,
+        backgroundColor: theme.palette.grey[200],
+        borderRadius: theme.spacing(3),
     },
 
     '& .MuiAccordionSummary-content': {
@@ -34,11 +38,20 @@ export const StyledAccordionSummary = styled(
 
 export const StyledAccordionDetails = styled(
     AccordionDetails,
-)<AccordionDetailsProps>(() => ({
+)<AccordionDetailsProps>(({ theme }) => ({
     padding: 0,
+    marginLeft: theme.spacing(15),
     width: '100%',
 }));
 
 export const StyledList = styled(List)<ListProps>(() => ({
     width: '100%',
 }));
+
+export const StyledListItemButton = styled(ListItemButton)<ListItemButtonProps>(
+    () => ({
+        '&:hover': {
+            backgroundColor: 'transparent',
+        },
+    }),
+);

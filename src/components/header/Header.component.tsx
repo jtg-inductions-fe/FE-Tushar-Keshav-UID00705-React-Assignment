@@ -60,8 +60,9 @@ export function Header({ onMenuClick }: HeaderProps) {
         <StyledAppBar elevation={0}>
             <StyledToolbar>
                 <Stack
-                    direction={'row'}
+                    direction="row"
                     flexGrow={1}
+                    alignItems="center"
                     spacing={theme.spacing(8)}
                     useFlexGap={true}
                 >
@@ -79,6 +80,7 @@ export function Header({ onMenuClick }: HeaderProps) {
                     <StyledNotificationIcon
                         fontSize="large"
                         color="secondary"
+                        onClick={() => void navigate('/notifications')}
                     />
                     <IconButton onClick={handleOpen}>
                         <StyledAvatar src={userDetails.avatarPath} />

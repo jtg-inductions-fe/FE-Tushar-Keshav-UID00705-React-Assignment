@@ -1,5 +1,3 @@
-import { DROP_SHADOW, HEADER_HEIGHT } from 'constant/stylesConstnats';
-
 import { CircleNotifications } from '@mui/icons-material';
 import {
     AppBar,
@@ -13,6 +11,8 @@ import {
     ToolbarProps,
 } from '@mui/material';
 
+import { DROP_SHADOW, HEADER_HEIGHT } from '@constant';
+
 export const StyledAppBar = styled(AppBar)<AppBarProps>(({ theme }) => ({
     zIndex: theme.zIndex.drawer + 1,
     backgroundColor: theme.palette.background.default,
@@ -22,8 +22,11 @@ export const StyledAppBar = styled(AppBar)<AppBarProps>(({ theme }) => ({
     height: HEADER_HEIGHT,
 }));
 
-export const StyledToolbar = styled(Toolbar)<ToolbarProps>(() => ({
+export const StyledToolbar = styled(Toolbar)<ToolbarProps>(({ theme }) => ({
     minHeight: 0,
+    [`${theme.breakpoints.up('xs')} and (orientation: landscape)`]: {
+        minHeight: 0,
+    },
 }));
 
 export const StyledNotificationIcon = styled(CircleNotifications)(() => ({

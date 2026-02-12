@@ -6,13 +6,23 @@ export type SidebarMenuItemDetails = {
     childrens?: SidebarMenuItemDetails[];
     icon?: IconType;
     notificationCount?: number;
+    path: string;
 };
 
-export interface SidebarMenuProps {
+export type SidebarMenuProps = {
     groups: SidebarMenuItemDetails[][];
-}
+    onMenuItemClick: (path: string) => void;
+};
 
-export interface SidebarMenuItemProps {
+export type SidebarMenuItemProps = {
     item: SidebarMenuItemDetails;
+    onMenuItemClick: (path: string) => void;
     disablePadding?: boolean;
-}
+};
+
+export type SidebarMenuListProps = {
+    item: SidebarMenuItemDetails;
+    onMenuItemClick: (path: string) => void;
+    activeAccordionId: number;
+    onAccordionClick: (id: number) => void;
+};

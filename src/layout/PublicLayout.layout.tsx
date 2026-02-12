@@ -1,12 +1,12 @@
 import { useState } from 'react';
 
-import { HEADER_HEIGHT } from 'constant/stylesConstnats';
 import { Outlet, useNavigate } from 'react-router-dom';
 
 import { Box } from '@mui/material';
 
 import { ErrorView, Header, Sidebar } from '@components';
 import { SOMETHING_WENT_WRONG } from '@constant';
+import { HEADER_HEIGHT } from '@constant';
 import { MainErrorBoundary } from '@error';
 
 export function PublicLayout() {
@@ -28,7 +28,7 @@ export function PublicLayout() {
         >
             <Box height="100vh" display="flex">
                 <MainErrorBoundary>
-                    <Header onMenuClick={() => setMenuState(!isMenuOpen)} />
+                    <Header onMenuClick={() => setMenuState((prev) => !prev)} />
                 </MainErrorBoundary>
                 <MainErrorBoundary>
                     <Sidebar isMenuOpen={isMenuOpen} />
