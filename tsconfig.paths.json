@@ -9,7 +9,8 @@
             "@components": ["components/index"],
             "@error": ["error/index"],
             "@layout": ["layout/index"],
-            "@typeDefs": ["types"]
+            "@hooks": ["hooks/index"],
+            "@typeDefs": ["types"],
         }
     }
 }

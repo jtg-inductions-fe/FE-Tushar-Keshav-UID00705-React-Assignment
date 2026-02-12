@@ -8,9 +8,10 @@ export function RouterErrorBoundary() {
     const onClick = () => {
         void navigate('/');
     };
-    
+
     const error = useRouteError();
-    console.error("React router error caught", error)
+    // eslint-disable-next-line no-console
+    console.error('React router error caught', error);
 
     return <ErrorView error={{ ...SOMETHING_WENT_WRONG }} onClick={onClick} />;
 }

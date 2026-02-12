@@ -2,7 +2,6 @@ import { Grid2, Typography } from '@mui/material';
 
 export function Dashboard() {
     // TODO: This is for the demo purpose
-    throw Error();
     return (
         <Grid2 container>
             <Typography variant="h1" color="primary">

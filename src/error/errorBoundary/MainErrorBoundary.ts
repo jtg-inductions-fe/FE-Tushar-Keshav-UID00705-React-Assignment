@@ -19,8 +19,12 @@ export class MainErrorBoundary extends React.Component<
     }
 
     componentDidCatch(error: Error, info: ErrorInfo) {
-        console.error("Error Boundary caught an error:", error, info.componentStack);
-
+        // eslint-disable-next-line no-console
+        console.error(
+            'Error Boundary caught an error:',
+            error,
+            info.componentStack,
+        );
     }
 
     render(): ReactNode {

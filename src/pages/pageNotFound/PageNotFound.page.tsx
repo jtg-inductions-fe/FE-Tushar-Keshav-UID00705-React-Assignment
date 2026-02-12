@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 import { useLocation, useNavigate } from 'react-router-dom';
 
 import { ErrorView } from '@components';
@@ -8,8 +10,11 @@ export function PageNotFound() {
     const onClick = () => {
         void navigate('/');
     };
-    
+
     const location = useLocation();
-    console.error("Invalid path accessed", location.pathname);
+    useEffect(() => {
+        // eslint-disable-next-line no-console
+        console.error('Invalid path accessed', location.pathname);
+    }, [location.pathname]);
     return <ErrorView error={{ ...PAGE_NOT_FOUND }} onClick={onClick} />;
 }

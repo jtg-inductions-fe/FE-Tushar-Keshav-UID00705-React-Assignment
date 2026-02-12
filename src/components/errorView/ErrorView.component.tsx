@@ -17,20 +17,18 @@ export function ErrorView({ error, onClick }: ErrorDetailsProp) {
             <CenteredStack spacing={5} useFlexGap={true}>
                 <CenteredStack spacing={2.5} useFlexGap={true}>
                     <StyledTypography variant="h1">
-                        {' '}
-                        {error.title}{' '}
+                        {error.title}
                     </StyledTypography>
                     <StyledTypography
                         variant="body1"
                         color={theme.palette.grey[500]}
                     >
-                        {error.subtext}{' '}
+                        {error.subtext}
                     </StyledTypography>
                 </CenteredStack>
                 <CenteredStack>
                     <Button variant="contained" onClick={onClick}>
-                        {' '}
-                        {error.buttonText}{' '}
+                        {error.buttonText}
                     </Button>
                 </CenteredStack>
             </CenteredStack>

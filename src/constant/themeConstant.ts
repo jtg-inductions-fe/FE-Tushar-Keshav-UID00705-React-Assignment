@@ -7,6 +7,10 @@ export const COLORS = {
         MAIN: '#0E9F6E',
         CONTRAST_TEXT: '#FFFFFF',
     },
+    SECONDARY: {
+        MAIN: '#000',
+        CONTRAST_TEXT: '#FFFFFF',
+    },
     BACKGROUND: {
         DEFAULT: '#FFFFFF',
     },
