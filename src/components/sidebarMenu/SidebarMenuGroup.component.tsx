@@ -1,11 +1,10 @@
-import { ExpandMore } from '@mui/icons-material';
-import { ListItem } from '@mui/material';
-
 import {
+    ExpandIcon,
     StyledAccordion,
     StyledAccordionDetails,
     StyledAccordionSummary,
     StyledList,
+    StyledListItem,
 } from './SidebarMenu.styles';
 import { SidebarMenuListProps } from './SidebarMenu.types';
 import { SidebarMenuListItem } from './SidebarMenuListItem.component';
@@ -27,7 +26,7 @@ export function SidebarMenuList({
             />
         ));
         return (
-            <ListItem>
+            <StyledListItem>
                 <StyledAccordion
                     elevation={0}
                     disableGutters
@@ -35,7 +34,7 @@ export function SidebarMenuList({
                     expanded={activeAccordionId == item.id}
                     onChange={() => onAccordionClick(item.id)}
                 >
-                    <StyledAccordionSummary expandIcon={<ExpandMore />}>
+                    <StyledAccordionSummary expandIcon={<ExpandIcon />}>
                         <SidebarMenuListItem
                             key={item.id}
                             onMenuItemClick={() => {}}
@@ -47,7 +46,7 @@ export function SidebarMenuList({
                         <StyledList disablePadding={true}>{subMenu}</StyledList>
                     </StyledAccordionDetails>
                 </StyledAccordion>
-            </ListItem>
+            </StyledListItem>
         );
     } else {
         return (
