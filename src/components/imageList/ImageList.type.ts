@@ -7,6 +7,6 @@ export type ImageItem = {
     hideOnMobile?: boolean;
 };
 
-export interface QuiltedImageListProps {
+export type QuiltedImageListProps = {
     images: ImageItem[];
-}
+};

@@ -56,8 +56,9 @@ export const StyledSidebar = styled(Drawer)<DrawerProps>(({ theme }) => ({
     },
 }));
 
-export const ScrollableBox = styled(Box)<BoxProps>(() => ({
+export const ScrollableBox = styled(Box)<BoxProps>(({ theme }) => ({
     overflowY: 'auto',
     overflowX: 'clip',
     scrollbarGutter: 'stable',
+    padding: `0 ${theme.spacing(2)}`,
 }));

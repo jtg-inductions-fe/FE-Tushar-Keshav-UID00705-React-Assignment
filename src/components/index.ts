@@ -9,3 +9,4 @@ export {
 } from './styledComponent';
 export { PopoverCard } from './popoverCard';
 export { SearchBar } from './searchBar';
+export { SectionCard } from './sectionCard';

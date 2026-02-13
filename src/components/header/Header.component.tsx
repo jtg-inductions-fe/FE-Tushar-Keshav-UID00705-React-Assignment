@@ -77,11 +77,13 @@ export function Header({ onMenuClick }: HeaderProps) {
                 </Stack>
                 <Box flexGrow={1} />
                 <CenteredStack direction="row" spacing={3} useFlexGap={true}>
-                    <StyledNotificationIcon
-                        fontSize="large"
-                        color="secondary"
-                        onClick={() => void navigate('/notifications')}
-                    />
+                    <IconButton>
+                        <StyledNotificationIcon
+                            fontSize="large"
+                            color="secondary"
+                            onClick={() => void navigate('/notifications')}
+                        />
+                    </IconButton>
                     <IconButton onClick={handleOpen}>
                         <StyledAvatar src={userDetails.avatarPath} />
                     </IconButton>

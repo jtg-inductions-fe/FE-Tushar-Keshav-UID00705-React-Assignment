@@ -1,15 +1,9 @@
 import { useLocation } from 'react-router-dom';
 
-import {
-    Badge,
-    Box,
-    ListItem,
-    ListItemIcon,
-    ListItemText,
-} from '@mui/material';
+import { Badge, Box, ListItemIcon, ListItemText } from '@mui/material';
 
 import { ICON_MAP } from './SidebarMenu.constant';
-import { StyledListItemButton } from './SidebarMenu.styles';
+import { StyledListItem, StyledListItemButton } from './SidebarMenu.styles';
 import { SidebarMenuItemProps } from './SidebarMenu.types';
 
 export function SidebarMenuListItem({
@@ -20,7 +14,10 @@ export function SidebarMenuListItem({
     const IconComponent = item.icon ? ICON_MAP[item.icon] : undefined;
     const isActive = useLocation().pathname === item.path;
     return (
-        <ListItem disablePadding={disablePadding}>
+        <StyledListItem
+            disablePadding={disablePadding}
+            disableGutters={disablePadding}
+        >
             <StyledListItemButton
                 disableRipple
                 onClick={() => onMenuItemClick(item.path)}
@@ -50,6 +47,6 @@ export function SidebarMenuListItem({
                     />
                 )}
             </StyledListItemButton>
-        </ListItem>
+        </StyledListItem>
     );
 }
