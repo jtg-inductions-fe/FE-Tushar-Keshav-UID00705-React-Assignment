@@ -1,5 +1,5 @@
 export type SectionCardProps = {
     title: string;
-    spacing: number;
+    subtext?: string;
     toolTipText?: string;
 };
