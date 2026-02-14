@@ -45,7 +45,11 @@ export function SectionCard({
                         </Tooltip>
                     )}
                 </Box>
-                {subtext && <Typography variant="body2">{subtext}</Typography>}
+                {subtext && (
+                    <Typography variant="body2" color={theme.palette.grey[500]}>
+                        {subtext}
+                    </Typography>
+                )}
             </Box>
             {children}
         </Box>

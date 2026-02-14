@@ -9,6 +9,8 @@ import { SOMETHING_WENT_WRONG } from '@constant';
 import { HEADER_HEIGHT } from '@constant';
 import { MainErrorBoundary } from '@error';
 
+import { MainContent } from './PublicLayout.styles';
+
 export function PublicLayout() {
     const [isMenuOpen, setMenuState] = useState(false);
     const theme = useTheme();
@@ -33,16 +35,16 @@ export function PublicLayout() {
                 <MainErrorBoundary>
                     <Sidebar isMenuOpen={isMenuOpen} />
                 </MainErrorBoundary>
-                <Box
+                <MainContent
                     component="main"
                     flexGrow={1}
                     bgcolor={theme.palette.grey[50]}
                 >
                     <Box height={HEADER_HEIGHT} />
-                    <Box overflow="auto">
+                    <Box>
                         <Outlet />
                     </Box>
-                </Box>
+                </MainContent>
             </Box>
         </MainErrorBoundary>
     );

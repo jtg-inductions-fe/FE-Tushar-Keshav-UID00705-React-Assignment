@@ -1,7 +1,3 @@
-import { CardItem } from 'components/cardItem';
-import { QuiltedImageList } from 'components/imageList/ImageList.component';
-import { CustomLineChart } from 'components/lineChart/LineChart.component';
-
 import {
     Box,
     Divider,
@@ -11,6 +7,13 @@ import {
     useTheme,
 } from '@mui/material';
 
+import {
+    CardItem,
+    CustomLineChart,
+    Footer,
+    QuiltedImageList,
+    TransactionTable,
+} from '@components';
 import { SectionCard } from '@components';
 
 import {
@@ -18,11 +21,12 @@ import {
     IMAGE_DATA,
     LATEST_CUSTOMERS,
     TOP_PRODUCTS,
+    TRANSACTIONS,
 } from './Dashboard.constants';
 
 export function Dashboard() {
     const theme = useTheme();
-    const isMobile = useMediaQuery(theme.breakpoints.down('tablet'));
+    const isDesktop = useMediaQuery(theme.breakpoints.up('smallDesktop'));
     return (
         <Grid2 container padding={theme.spacing(4)}>
             <QuiltedImageList images={IMAGE_DATA} />
@@ -40,7 +44,7 @@ export function Dashboard() {
                 <Box
                     display="flex"
                     gap={theme.spacing(4)}
-                    flexDirection={isMobile ? 'column' : 'row'}
+                    flexDirection={isDesktop ? 'row' : 'column'}
                 >
                     <SectionCard title="Latest Customers">
                         <List>
@@ -73,6 +77,16 @@ export function Dashboard() {
                         </List>
                     </SectionCard>
                 </Box>
+                <SectionCard
+                    subtext="This is a list of latest transactions."
+                    title="Transactions"
+                >
+                    <TransactionTable
+                        transactions={TRANSACTIONS}
+                        transform={(transaction) => transaction}
+                    />
+                </SectionCard>
+                <Footer />
             </Box>
         </Grid2>
     );
