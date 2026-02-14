@@ -20,11 +20,10 @@ export const router = createBrowserRouter([
                 path: PATHS.DASHBOARD,
                 Component: Dashboard,
             },
-            
         ],
     },
     {
         path: PATHS.NOT_FOUND,
         Component: PageNotFound,
-    }
+    },
 ]);

@@ -35,7 +35,7 @@ export function SearchBar<T extends BaseOption>({
             open={open}
             onOpen={() => setOpen(true)}
             onClose={() => setOpen(false)}
-            noOptionsText={'No results found'}
+            noOptionsText="No results found"
             filterOptions={(x) => x}
             isOptionEqualToValue={(option: T, value: T) => {
                 if (typeof option === 'object' && typeof value === 'object') {
@@ -44,14 +44,14 @@ export function SearchBar<T extends BaseOption>({
                 return option === value;
             }}
             onChange={(_, value, reason) => {
-                if (reason == 'blur') {
+                if (reason === 'blur') {
                     setInput('');
                 } else {
                     void onOptionSelect(value);
                 }
             }}
             getOptionLabel={(option) => {
-                if (typeof option == 'string') {
+                if (typeof option === 'string') {
                     return option;
                 } else {
                     return option.name;
@@ -63,12 +63,12 @@ export function SearchBar<T extends BaseOption>({
             renderInput={(params) => (
                 <StyledTextField
                     {...params}
-                    placeholder={'Search'}
+                    placeholder="Search"
                     slotProps={{
                         input: {
                             ...params.InputProps,
                             startAdornment: (
-                                <StartInputAdornment position={'start'}>
+                                <StartInputAdornment position="start">
                                     <Search
                                         htmlColor={theme.palette.grey[500]}
                                     />

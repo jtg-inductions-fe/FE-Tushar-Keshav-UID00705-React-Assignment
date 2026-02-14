@@ -10,7 +10,7 @@
             "@error": ["error/index"],
             "@layout": ["layout/index"],
             "@hooks": ["hooks/index"],
-            "@typeDefs": ["types"],
+            "@typeDefs": ["types"]
         }
     }
 }
