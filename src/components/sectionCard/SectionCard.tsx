@@ -19,14 +19,14 @@ export function SectionCard({
     toolTipText,
 }: PropsWithChildren<SectionCardProps>) {
     const theme = useTheme();
-    const isMobile = useMediaQuery(theme.breakpoints.up('tablet'));
+    const isTablet = useMediaQuery(theme.breakpoints.up('tablet'));
 
     return (
         <Box
             display="flex"
-            gap={theme.spacing(isMobile ? 4 : 6)}
+            gap={theme.spacing(isTablet ? 4 : 6)}
             flexGrow={1}
-            padding={theme.spacing(isMobile ? 4 : 6)}
+            padding={theme.spacing(isTablet ? 4 : 6)}
             flexDirection="column"
             borderRadius={theme.spacing(4)}
             boxShadow={theme.shadows[3]}
