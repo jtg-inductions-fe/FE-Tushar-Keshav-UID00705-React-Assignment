@@ -1,7 +1,7 @@
 import { ErrorDetails } from '@typeDefs';
 
 export const SOMETHING_WENT_WRONG: ErrorDetails = {
-    imgSrc: '/src/assets/images/something-went-wrong.png',
+    imgSrc: '/src/assets/images/something-went-wrong.webp',
     title: 'Something has gone seriously wrong',
     subtext:
         'It’s always time for a coffee break We should be back by the time you finish your coffee.',

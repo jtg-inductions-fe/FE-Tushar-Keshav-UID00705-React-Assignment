@@ -34,6 +34,7 @@ export function useSearch<T extends BaseOption>(
         // Early return for empty spaces
         if (!debounceValue) {
             setOptions([]);
+
             return;
         }
 
@@ -59,6 +60,7 @@ export function useSearch<T extends BaseOption>(
 
         // cleanup function
         return () => {
+            setLoading(false);
             active = false;
         };
     }, [debounceValue]);

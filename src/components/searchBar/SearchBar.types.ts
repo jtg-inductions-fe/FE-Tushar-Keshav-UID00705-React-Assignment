@@ -15,7 +15,7 @@ export type GetUpdatedOptions<T extends BaseOption> = (
 
 export type OnOptionSelect<T extends BaseOption> = (input: T) => Promise<void>;
 
-export interface SearchBarProps<T extends BaseOption> {
+export type SearchBarProps<T extends BaseOption> = {
     getOptions: GetUpdatedOptions<T>;
     onOptionSelect: OnOptionSelect<T>;
-}
+};

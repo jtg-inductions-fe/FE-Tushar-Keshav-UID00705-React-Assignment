@@ -10,7 +10,7 @@ import {
     InterMediumTTF,
     InterMediumWOFF2,
     InterRegularTTF,
-    InterRegularWOFF2
+    InterRegularWOFF2,
 } from '@assets/fonts';
 
 const fontFaceDeclarations = `

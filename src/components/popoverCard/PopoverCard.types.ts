@@ -4,9 +4,9 @@ export type UserProfile = {
     avatarPath: string;
 };
 
-export interface UserCardProps {
+export type UserCardProps = {
     open: boolean;
     anchorEl: HTMLElement | null;
     onClose: () => void;
     user: UserProfile;
-}
+};

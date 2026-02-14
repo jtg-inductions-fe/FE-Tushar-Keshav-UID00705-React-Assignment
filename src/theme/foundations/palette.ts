@@ -1,6 +1,6 @@
-import type { PaletteOptions } from '@mui/material/styles';
+import { COLORS } from 'theme/themeConstant';
 
-import { COLORS } from '@constant';
+import type { PaletteOptions } from '@mui/material/styles';
 
 /* Custom Palette */
 export const palette: PaletteOptions = {
