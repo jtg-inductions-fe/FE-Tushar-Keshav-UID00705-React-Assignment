@@ -24,7 +24,7 @@ export function Sidebar({ isMenuOpen }: SidebarProps) {
             variant={isTablet ? 'permanent' : 'temporary'}
             anchor="left"
         >
-            <Box height={HEADER_HEIGHT} />
+            <Box minHeight={HEADER_HEIGHT} />
             <ScrollableBox>
                 <SidebarMenu
                     groups={SIDEBAR_MENU_ITEM_DETAILS}

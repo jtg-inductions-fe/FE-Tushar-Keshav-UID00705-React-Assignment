@@ -40,7 +40,7 @@ export function PublicLayout() {
                     flexGrow={1}
                     bgcolor={theme.palette.grey[50]}
                 >
-                    <Box height={HEADER_HEIGHT} />
+                    <Box minHeight={HEADER_HEIGHT} />
                     <Box>
                         <Outlet />
                     </Box>
