@@ -6,7 +6,7 @@ import {
 } from 'components/searchBar/SearchBar.types';
 import { useDebounce } from 'use-debounce';
 
-import { SearchHookState } from './types';
+import { SearchHookState } from './useSearch.types';
 
 /**
  * A custom hook to manage the state and logic for a search suggestion system.

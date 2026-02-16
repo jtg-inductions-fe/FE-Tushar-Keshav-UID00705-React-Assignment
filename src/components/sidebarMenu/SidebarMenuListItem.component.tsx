@@ -1,8 +1,8 @@
+import { ICON_MAP } from 'components/customIconButton/CustomIconButton.types';
 import { useLocation } from 'react-router-dom';
 
 import { Badge, Box, ListItemIcon, ListItemText } from '@mui/material';
 
-import { ICON_MAP } from './SidebarMenu.constant';
 import { StyledListItem, StyledListItemButton } from './SidebarMenu.styles';
 import { SidebarMenuItemProps } from './SidebarMenu.types';
 
@@ -40,12 +40,13 @@ export function SidebarMenuListItem({
                     color={isActive ? 'primary' : 'secondary'}
                 />
                 <Box flexGrow={1} />
-                {item.notificationCount && (
-                    <Badge
-                        badgeContent={item.notificationCount}
-                        color="error"
-                    />
-                )}
+                {item.notificationCount != null &&
+                    item.notificationCount > 0 && (
+                        <Badge
+                            badgeContent={item.notificationCount}
+                            color="error"
+                        />
+                    )}
             </StyledListItemButton>
         </StyledListItem>
     );

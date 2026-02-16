@@ -68,7 +68,7 @@ export function Header({ onMenuClick }: HeaderProps) {
                 >
                     <Logo component="img" src={logoPath} alt="logo"></Logo>
                     <MenuButton onClick={onMenuClick}>
-                        <Notes fontSize="large" htmlColor="secondary" />
+                        <Notes fontSize="large" color="secondary" />
                     </MenuButton>
                     <SearchBar<Product>
                         getOptions={getOptions}

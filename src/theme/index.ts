@@ -28,6 +28,15 @@ theme = createTheme(theme, {
     typography: {
         ...typography.typographyStyle(theme),
     },
+    components: {
+        MuiListItemIcon: {
+            styleOverrides: {
+                root: {
+                    minWidth: typography.typographyUtil.pxToRem(36),
+                },
+            },
+        },
+    },
 });
 
 export { theme };

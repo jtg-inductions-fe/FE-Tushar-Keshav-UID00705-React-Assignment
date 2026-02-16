@@ -31,7 +31,7 @@ export function SidebarMenuList({
                     elevation={0}
                     disableGutters
                     square
-                    expanded={activeAccordionId == item.id}
+                    expanded={activeAccordionId === item.id}
                     onChange={() => onAccordionClick(item.id)}
                 >
                     <StyledAccordionSummary expandIcon={<ExpandIcon />}>

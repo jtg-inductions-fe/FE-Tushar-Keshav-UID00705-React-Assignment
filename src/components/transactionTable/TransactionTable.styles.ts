@@ -1,16 +1,18 @@
 import {
     styled,
+    tableCellClasses,
     TableHead,
     TableHeadProps,
     TableRow,
+    tableRowClasses,
     TableRowProps,
 } from '@mui/material';
 
 export const StyledTableHead = styled(TableHead)<TableHeadProps>(
     ({ theme }) => ({
         backgroundColor: theme.palette.grey[50],
-        '& .MuiTableRow-head': {
-            '& .MuiTableCell-head': {
+        [`& .${tableRowClasses.head}`]: {
+            [`& .${tableCellClasses.head}`]: {
                 fontSize: theme.typography.overline.fontSize,
                 fontWeight: theme.typography.overline.fontWeight,
                 lineHeight: theme.typography.overline.lineHeight,
@@ -21,11 +23,11 @@ export const StyledTableHead = styled(TableHead)<TableHeadProps>(
 );
 
 export const StyledTableRow = styled(TableRow)<TableRowProps>(({ theme }) => ({
-    '&.MuiTableRow-root:nth-of-type(even)': {
+    [`&.${tableRowClasses.root}:nth-of-type(even)`]: {
         backgroundColor: theme.palette.grey[50],
     },
 
-    '& .MuiTableCell-root': {
+    [`& .${tableCellClasses.root}`]: {
         borderBottom: 'none',
     },
 }));

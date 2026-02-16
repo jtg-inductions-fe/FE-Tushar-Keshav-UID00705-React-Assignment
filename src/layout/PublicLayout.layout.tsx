@@ -5,8 +5,7 @@ import { Outlet, useNavigate } from 'react-router-dom';
 import { Box, useTheme } from '@mui/material';
 
 import { ErrorView, Header, Sidebar } from '@components';
-import { SOMETHING_WENT_WRONG } from '@constant';
-import { HEADER_HEIGHT } from '@constant';
+import { HEADER_HEIGHT, SOMETHING_WENT_WRONG } from '@constant';
 import { MainErrorBoundary } from '@error';
 
 import { MainContent } from './PublicLayout.styles';

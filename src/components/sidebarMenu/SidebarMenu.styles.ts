@@ -5,10 +5,12 @@ import {
     AccordionDetailsProps,
     AccordionProps,
     AccordionSummary,
+    accordionSummaryClasses,
     AccordionSummaryProps,
     List,
     ListItem,
     ListItemButton,
+    listItemButtonClasses,
     ListItemButtonProps,
     ListItemProps,
     ListProps,
@@ -29,15 +31,15 @@ export const StyledAccordionSummary = styled(
         backgroundColor: theme.palette.grey[200],
         borderRadius: theme.spacing(3),
     },
-    '&.Mui-expanded': {
+    [`&.${accordionSummaryClasses.expanded}`]: {
         minHeight: 0,
         backgroundColor: theme.palette.grey[200],
         borderRadius: theme.spacing(3),
     },
 
-    '& .MuiAccordionSummary-content': {
+    [`& .${accordionSummaryClasses.content}`]: {
         margin: 0,
-        '&.Mui-expanded': {
+        [`&.${accordionSummaryClasses.expanded}`]: {
             margin: 0,
         },
     },
@@ -63,7 +65,7 @@ export const StyledListItemButton = styled(ListItemButton)<ListItemButtonProps>(
             backgroundColor: theme.palette.grey[200],
             borderRadius: theme.spacing(3),
         },
-        '&.Mui-selected': {
+        [`&.${listItemButtonClasses.selected}`]: {
             backgroundColor: 'transparent',
             '&:hover': {
                 backgroundColor: 'transparent',

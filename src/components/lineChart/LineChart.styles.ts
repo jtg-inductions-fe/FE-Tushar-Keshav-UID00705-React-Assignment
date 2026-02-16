@@ -1,6 +1,6 @@
 import { Box, BoxProps, Card, CardProps, styled } from '@mui/material';
 
-export const StyledCard = styled(Card)<CardProps>(({ theme }) => ({
+export const TooltipCard = styled(Card)<CardProps>(({ theme }) => ({
     boxShadow: theme.shadows[2],
     borderRadius: theme.typography.pxToRem(12),
     padding: `${theme.spacing(2)} ${theme.spacing(3)}`,

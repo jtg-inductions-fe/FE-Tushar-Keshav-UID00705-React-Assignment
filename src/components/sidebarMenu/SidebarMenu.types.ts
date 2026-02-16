@@ -1,4 +1,4 @@
-import { IconType } from './SidebarMenu.constant';
+import { IconType } from '@components';
 
 export type SidebarMenuItemDetails = {
     id: number;

@@ -6,7 +6,6 @@ import { UserCardProps } from './PopoverCard.types';
 
 /**
  * A pop over card which gets attached to a element
- * @param {UserCardProps} props:
  * @param {boolean} open - Whether the popover card is open or closed
  * @param {HTMLElement} anchorEl - HTML element with which it gets linked
  * @param {() => void} onClose - Callback, called when the card closes

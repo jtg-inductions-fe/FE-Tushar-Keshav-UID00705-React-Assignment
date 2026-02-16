@@ -12,12 +12,7 @@ export function CardItem({
     const theme = useTheme();
     return (
         <ListItem>
-            <Box
-                display="flex"
-                width="100%"
-                alignItems="center"
-                gap={theme.spacing(1)}
-            >
+            <Box display="flex" width="100%" alignItems="center">
                 <Box display="flex" alignItems="center" gap={theme.spacing(2)}>
                     {avatarPath && <Avatar src={avatarPath} alt="Avatar" />}
                     <Box>

@@ -2,6 +2,7 @@ import {
     Autocomplete,
     InputAdornment,
     InputAdornmentProps,
+    outlinedInputClasses,
     styled,
     TextField,
 } from '@mui/material';
@@ -26,11 +27,11 @@ export const StartInputAdornment = styled(InputAdornment)<InputAdornmentProps>(
 export const StyledTextField = styled(TextField)(({ theme }) => ({
     padding: 0,
 
-    '& .MuiOutlinedInput-root': {
+    [`& .${outlinedInputClasses.root}`]: {
         padding: `${theme.spacing(1)} ${theme.spacing(4)}`,
         borderRadius: theme.typography.pxToRem(16),
 
-        '& .MuiOutlinedInput-input': {
+        [`& .${outlinedInputClasses.input}`]: {
             paddingLeft: 0,
             paddingRight: 0,
         },

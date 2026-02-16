@@ -1,6 +1,6 @@
 export type Point = {
-    YAxis: number;
-    XAxis: string;
+    xAxis: string;
+    yAxis: number;
 };
 
 export type LineChartProps = {

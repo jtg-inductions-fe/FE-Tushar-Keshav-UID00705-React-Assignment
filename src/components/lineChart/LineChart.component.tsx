@@ -10,8 +10,8 @@ import {
 
 import { useMediaQuery, useTheme } from '@mui/material';
 
+import { CustomChartToolTip } from './CustomChartToolTip.component';
 import { LineChartProps } from './LineChart.types';
-import { CustomToolTip } from './ToolTip.component';
 
 export function CustomLineChart({ data }: LineChartProps) {
     const theme = useTheme();
@@ -26,17 +26,16 @@ export function CustomLineChart({ data }: LineChartProps) {
                 }}
                 responsive={true}
                 data={data}
-                accessibilityLayer={false}
                 margin={{ left: 12, bottom: 12, top: 16, right: 12 }}
             >
                 <CartesianGrid
                     horizontal={true}
                     vertical={false}
-                    strokeWidth={theme.typography.pxToRem(1)}
+                    strokeWidth={1}
                     stroke={theme.palette.grey[100]}
                 />
                 <XAxis
-                    dataKey="XAxis"
+                    dataKey="xAxis"
                     interval="preserveStartEnd"
                     angle={isMobile ? -45 : 0}
                     padding={{ left: 10, right: 10 }}
@@ -50,12 +49,12 @@ export function CustomLineChart({ data }: LineChartProps) {
                     }}
                 />
                 <YAxis
-                    dataKey="YAxis"
+                    dataKey="yAxis"
                     tickFormatter={(value) => `${value / 1000}K`}
                     domain={[0, 240000]}
                     ticks={[0, 40000, 80000, 120000, 160000, 200000, 240000]}
                     interval="preserveStart"
-                    hide={isMobile ? true : false}
+                    hide={isMobile}
                     axisLine={false}
                     tickLine={false}
                     tickMargin={12}
@@ -67,7 +66,7 @@ export function CustomLineChart({ data }: LineChartProps) {
                 />
                 <Tooltip
                     animationDuration={200}
-                    content={CustomToolTip}
+                    content={CustomChartToolTip}
                     cursor={{
                         strokeDasharray: '5 5',
                         color: theme.palette.grey[200],
@@ -76,7 +75,7 @@ export function CustomLineChart({ data }: LineChartProps) {
                 <Line
                     type="monotone"
                     stroke={theme.palette.primary.main}
-                    dataKey="YAxis"
+                    dataKey="yAxis"
                     activeDot={{ r: 6, color: '#fff' }}
                     strokeWidth={3}
                 />

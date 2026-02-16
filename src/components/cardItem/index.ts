@@ -1,1 +1,2 @@
-export { CardItem } from './CardItem';
+export { CardItem } from './CardItem.component';
+export type { CardItemProps } from './CardItem.types';

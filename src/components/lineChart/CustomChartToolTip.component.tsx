@@ -6,9 +6,9 @@ import {
 
 import { Box, Typography, useTheme } from '@mui/material';
 
-import { Dot, StyledCard } from './LineChart.styles';
+import { Dot, TooltipCard } from './LineChart.styles';
 
-export function CustomToolTip({
+export function CustomChartToolTip({
     active,
     payload,
     label,
@@ -19,7 +19,7 @@ export function CustomToolTip({
         const formattedValue = `$${value / 1000}k`;
 
         return (
-            <StyledCard elevation={0}>
+            <TooltipCard elevation={0}>
                 <Typography variant="caption" color={theme.palette.grey[600]}>
                     {label}
                 </Typography>
@@ -36,9 +36,8 @@ export function CustomToolTip({
                         {formattedValue}
                     </Typography>
                 </Box>
-            </StyledCard>
+            </TooltipCard>
         );
-    } else {
-        return null;
     }
+    return null;
 }

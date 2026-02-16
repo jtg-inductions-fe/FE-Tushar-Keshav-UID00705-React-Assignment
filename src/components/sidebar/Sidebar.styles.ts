@@ -1,4 +1,11 @@
-import { Box, BoxProps, Drawer, DrawerProps, styled } from '@mui/material';
+import {
+    Box,
+    BoxProps,
+    Drawer,
+    drawerClasses,
+    DrawerProps,
+    styled,
+} from '@mui/material';
 
 import { DRAWER_WIDTH } from './Sidebar.constant';
 
@@ -29,7 +36,7 @@ export const StyledSidebar = styled(Drawer)<DrawerProps>(({ theme }) => ({
         },
     }),
 
-    '& .MuiDrawer-paper': {
+    [`& .${drawerClasses.paper}`]: {
         width: DRAWER_WIDTH.mobile,
 
         ...(DRAWER_WIDTH.tablet && {
@@ -60,5 +67,5 @@ export const ScrollableBox = styled(Box)<BoxProps>(({ theme }) => ({
     overflowY: 'auto',
     overflowX: 'clip',
     scrollbarGutter: 'stable',
-    padding: `0 ${theme.spacing(2)}`,
+    padding: `0 ${theme.spacing(3)}`,
 }));

@@ -3,10 +3,10 @@ import { SidebarMenuItemDetails } from 'components/sidebarMenu/SidebarMenu.types
 import { ResponsiveWidth } from '@typeDefs';
 
 export const DRAWER_WIDTH: ResponsiveWidth = {
-    mobile: '32rem',
+    mobile: '100%',
     tablet: '40%',
     smallDesktop: '30%',
-    desktop: '20%',
+    desktop: '15%',
     largeDesktop: '15%',
 };
 

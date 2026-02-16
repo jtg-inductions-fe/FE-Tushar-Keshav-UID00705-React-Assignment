@@ -1,9 +1,9 @@
 import { SidebarMenu } from 'components/sidebarMenu';
 import { useNavigate } from 'react-router-dom';
 
-import { Public, Settings, Tune } from '@mui/icons-material';
-import { Box, IconButton, useMediaQuery, useTheme } from '@mui/material';
+import { Box, useMediaQuery, useTheme } from '@mui/material';
 
+import { CustomIconButton } from '@components';
 import { HEADER_HEIGHT } from '@constant';
 
 import { SIDEBAR_MENU_ITEM_DETAILS } from './Sidebar.constant';
@@ -38,24 +38,21 @@ export function Sidebar({ isMenuOpen }: SidebarProps) {
                 justifyContent="center"
                 gap={theme.spacing(6)}
             >
-                <IconButton>
-                    <Tune
-                        color="secondary"
-                        onClick={() => void navigate('/customizations')}
-                    />
-                </IconButton>
-                <IconButton>
-                    <Public
-                        color="secondary"
-                        onClick={() => void navigate('/data')}
-                    />
-                </IconButton>
-                <IconButton>
-                    <Settings
-                        color="secondary"
-                        onClick={() => void navigate('/settings')}
-                    />
-                </IconButton>
+                <CustomIconButton
+                    icon="tune"
+                    ariaLabel="tune"
+                    onClick={() => void navigate('/tune')}
+                />
+                <CustomIconButton
+                    icon="public"
+                    ariaLabel="public"
+                    onClick={() => void navigate('/data')}
+                />
+                <CustomIconButton
+                    icon="settings"
+                    ariaLabel="settings"
+                    onClick={() => void navigate('/settings')}
+                />
             </Box>
             <Box height={theme.spacing(6)} />
         </StyledSidebar>
