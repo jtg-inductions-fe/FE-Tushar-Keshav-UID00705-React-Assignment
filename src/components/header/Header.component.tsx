@@ -2,6 +2,7 @@ import { useCallback, useState } from 'react';
 
 import { useNavigate } from 'react-router-dom';
 
+import { Notes } from '@mui/icons-material';
 import { Box, IconButton, Stack, useTheme } from '@mui/material';
 
 import {
@@ -14,16 +15,17 @@ import {
 import { logoPath, userDetails } from './Header.constant';
 import {
     Logo,
+    MenuButton,
     StyledAppBar,
     StyledNotificationIcon,
     StyledToolbar,
 } from './Header.styles';
-import { Product } from './Header.types';
+import { HeaderProps, Product } from './Header.types';
 
 /**
  * @returns returns the Header JSX
  */
-export function Header() {
+export function Header({ onMenuClick }: HeaderProps) {
     const theme = useTheme();
     const navigate = useNavigate();
 
@@ -38,12 +40,9 @@ export function Header() {
     );
 
     // Callback for search bar when a particular option is selected
-    const onOptionSelect = useCallback(
-        async (option: Product) => {
-            await navigate(`product/${option.name}`);
-        },
-        [navigate],
-    );
+    const onOptionSelect = useCallback(async (option: Product) => {
+        await navigate(`product/${option.name}`);
+    }, []);
 
     // Callback for search bar to get `Options` from input string
     const getOptions = useCallback(
@@ -58,15 +57,19 @@ export function Header() {
     );
 
     return (
-        <StyledAppBar elevation={0} position="static">
+        <StyledAppBar elevation={0}>
             <StyledToolbar>
                 <Stack
-                    direction={'row'}
+                    direction="row"
                     flexGrow={1}
+                    alignItems="center"
                     spacing={theme.spacing(8)}
                     useFlexGap={true}
                 >
-                    <Logo component="img" src={logoPath} alt={'logo'}></Logo>
+                    <Logo component="img" src={logoPath} alt="logo"></Logo>
+                    <MenuButton onClick={onMenuClick}>
+                        <Notes fontSize="large" color="secondary" />
+                    </MenuButton>
                     <SearchBar<Product>
                         getOptions={getOptions}
                         onOptionSelect={onOptionSelect}
@@ -74,11 +77,13 @@ export function Header() {
                 </Stack>
                 <Box flexGrow={1} />
                 <CenteredStack direction="row" spacing={3} useFlexGap={true}>
-                    <StyledNotificationIcon
-                        fontSize={'large'}
-                        color="secondary"
-                        htmlColor="#000"
-                    />
+                    <IconButton>
+                        <StyledNotificationIcon
+                            fontSize="large"
+                            color="secondary"
+                            onClick={() => void navigate('/notifications')}
+                        />
+                    </IconButton>
                     <IconButton onClick={handleOpen}>
                         <StyledAvatar src={userDetails.avatarPath} />
                     </IconButton>

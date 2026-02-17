@@ -7,10 +7,11 @@
             "@constant": ["constant/index"],
             "@theme": ["theme/index"],
             "@components": ["components/index"],
+            "@container": ["container/index"],
             "@error": ["error/index"],
             "@layout": ["layout/index"],
             "@hooks": ["hooks/index"],
-            "@typeDefs": ["types"],
+            "@typeDefs": ["types"]
         }
     }
 }

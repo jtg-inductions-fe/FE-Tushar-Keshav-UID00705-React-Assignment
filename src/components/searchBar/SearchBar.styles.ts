@@ -2,12 +2,12 @@ import {
     Autocomplete,
     InputAdornment,
     InputAdornmentProps,
+    outlinedInputClasses,
     styled,
     TextField,
 } from '@mui/material';
 
-
-export const StyledSearchBar = styled(Autocomplete)(({theme}) => ({
+export const StyledSearchBar = styled(Autocomplete)(({ theme }) => ({
     width: '100%',
     borderRadius: theme.typography.pxToRem(16),
     maxWidth: theme.typography.pxToRem(400),
@@ -19,19 +19,19 @@ export const StyledSearchBar = styled(Autocomplete)(({theme}) => ({
 })) as typeof Autocomplete;
 
 export const StartInputAdornment = styled(InputAdornment)<InputAdornmentProps>(
-    ({theme}) => ({
+    ({ theme }) => ({
         marginRight: theme.spacing(1),
     }),
 );
 
-export const StyledTextField = styled(TextField)(({theme}) => ({
+export const StyledTextField = styled(TextField)(({ theme }) => ({
     padding: 0,
 
-    '& .MuiOutlinedInput-root': {
+    [`& .${outlinedInputClasses.root}`]: {
         padding: `${theme.spacing(1)} ${theme.spacing(4)}`,
         borderRadius: theme.typography.pxToRem(16),
 
-        '& .MuiOutlinedInput-input': {
+        [`& .${outlinedInputClasses.input}`]: {
             paddingLeft: 0,
             paddingRight: 0,
         },
